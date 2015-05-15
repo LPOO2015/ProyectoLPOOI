@@ -1,0 +1,74 @@
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.exe
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.exe
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.pdb
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmLogin.resources
+C:\Users\Moises\Documents\Visual Studio 2008\Projects\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPrincipal.resources
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.exe
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.pdb
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.exe
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.pdb
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.dll
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.pdb
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\ResolveAssemblyReference.cache
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmLogin.resources
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPrincipal.resources
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmClientesAlta.resources
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.frmDestinosAlta.resources
+D:\unju\tercero\lpoo1\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.frmPeriodosAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.exe
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.pdb
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.exe
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.pdb
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmClientesAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmDestinosAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmLogin.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPeriodosAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPrincipal.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmUsuarios.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\moises\Desktop\lpoo\projectos\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.exe
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.pdb
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\bin\Debug\Vistas.exe
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\bin\Debug\Vistas.pdb
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmClientesAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmDestinosAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmLogin.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmPeriodosAlta.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmPrincipal.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmUsuarios.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmUsuarioAltaModificacion.resources
+C:\Users\moises\Desktop\lpoo\projectos\TP2_GRUPO7\Vistas\obj\Debug\Vistas.FrmPrestamos.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.exe
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.pdb
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.exe
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\bin\Debug\Vistas.pdb
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.dll
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\bin\Debug\ClasesBase.pdb
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\ResolveAssemblyReference.cache
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmClientesAlta.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmDestinosAlta.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmLogin.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPeriodosAlta.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPrestamos.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmPrincipal.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmUsuarioAltaModificacion.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmUsuarios.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
