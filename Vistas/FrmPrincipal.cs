@@ -64,5 +64,11 @@ namespace Vistas
             oFrmPrestamos.Show();
         }
 
+        private void mnuDestinos_Click(object sender, EventArgs e)
+        {
+            FrmTablaDestinos frmTablaDestinos = new FrmTablaDestinos();
+            frmTablaDestinos.Show();
+        }
+
     }
 }

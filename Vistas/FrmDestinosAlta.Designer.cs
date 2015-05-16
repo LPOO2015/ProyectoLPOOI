@@ -38,22 +38,22 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(98, 43);
+            this.txtCodigo.Location = new System.Drawing.Point(82, 23);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(182, 20);
             this.txtCodigo.TabIndex = 0;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(98, 82);
+            this.txtDescripcion.Location = new System.Drawing.Point(82, 56);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(238, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(182, 20);
             this.txtDescripcion.TabIndex = 1;
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(29, 50);
+            this.lblCodigo.Location = new System.Drawing.Point(13, 23);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 2;
@@ -62,7 +62,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(29, 89);
+            this.lblDescripcion.Location = new System.Drawing.Point(13, 56);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 3;
@@ -70,11 +70,11 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(98, 121);
+            this.btnAgregar.Location = new System.Drawing.Point(66, 91);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Aceptar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -82,7 +82,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(179, 121);
+            this.btnSalir.Location = new System.Drawing.Point(147, 91);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 174);
+            this.ClientSize = new System.Drawing.Size(288, 131);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblDescripcion);
@@ -105,6 +105,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Name = "FrmDestinosAlta";
             this.Text = "Destinos del Periodo";
+            this.Load += new System.EventHandler(this.FrmDestinosAlta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

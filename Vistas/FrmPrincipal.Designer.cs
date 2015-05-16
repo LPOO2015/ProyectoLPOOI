@@ -71,19 +71,20 @@
             // mnuPeriodos
             // 
             this.mnuPeriodos.Name = "mnuPeriodos";
-            this.mnuPeriodos.Size = new System.Drawing.Size(156, 22);
+            this.mnuPeriodos.Size = new System.Drawing.Size(152, 22);
             this.mnuPeriodos.Text = "Periodos";
             // 
             // mnuDestinos
             // 
             this.mnuDestinos.Name = "mnuDestinos";
-            this.mnuDestinos.Size = new System.Drawing.Size(156, 22);
+            this.mnuDestinos.Size = new System.Drawing.Size(152, 22);
             this.mnuDestinos.Text = "Destinos";
+            this.mnuDestinos.Click += new System.EventHandler(this.mnuDestinos_Click);
             // 
             // mnuUsuarios
             // 
             this.mnuUsuarios.Name = "mnuUsuarios";
-            this.mnuUsuarios.Size = new System.Drawing.Size(160, 22);
+            this.mnuUsuarios.Size = new System.Drawing.Size(152, 22);
             this.mnuUsuarios.Text = "Usuarios";
             this.mnuUsuarios.Click += new System.EventHandler(this.mnuUsuarios_Click);
             // 
@@ -93,20 +94,20 @@
             this.mnuNuevoPrestamo,
             this.mnuRegistroPrestamo});
             this.mnuPrestamos.Name = "mnuPrestamos";
-            this.mnuPrestamos.Size = new System.Drawing.Size(160, 22);
+            this.mnuPrestamos.Size = new System.Drawing.Size(152, 22);
             this.mnuPrestamos.Text = "Prestamos";
             // 
             // mnuNuevoPrestamo
             // 
             this.mnuNuevoPrestamo.Name = "mnuNuevoPrestamo";
-            this.mnuNuevoPrestamo.Size = new System.Drawing.Size(152, 22);
+            this.mnuNuevoPrestamo.Size = new System.Drawing.Size(117, 22);
             this.mnuNuevoPrestamo.Text = "Nuevo";
             this.mnuNuevoPrestamo.Click += new System.EventHandler(this.mnuNuevoPrestamo_Click);
             // 
             // mnuRegistroPrestamo
             // 
             this.mnuRegistroPrestamo.Name = "mnuRegistroPrestamo";
-            this.mnuRegistroPrestamo.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegistroPrestamo.Size = new System.Drawing.Size(117, 22);
             this.mnuRegistroPrestamo.Text = "Registro";
             // 
             // FrmPrincipal
