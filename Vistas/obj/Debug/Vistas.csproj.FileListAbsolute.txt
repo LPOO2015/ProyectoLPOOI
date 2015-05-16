@@ -72,3 +72,5 @@ D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.F
 D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.FrmUsuarios.resources
 D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.Properties.Resources.resources
 D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\Vistas\obj\Debug\Vistas.csproj.GenerateResource.Cache
+D:\Facultad\LPOO1\Proyectos y soluciones\ProyectoLPOOI\Vistas\obj\Debug\Vistas.exe
+D:\Facultad\LPOO1\Proyectos y soluciones\ProyectoLPOOI\Vistas\obj\Debug\Vistas.pdb

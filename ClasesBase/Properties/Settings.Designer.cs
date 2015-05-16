@@ -13,7 +13,7 @@ namespace ClasesBase.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")]
-    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -27,8 +27,8 @@ namespace ClasesBase.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"D:\\Facultad\\LPOO1\\Proyectos y solucion" +
-            "es\\LPOOI_GRUPO07\\BD\\prestamos.mdf\";Integrated Security=True;Connect Timeout=30;U" +
-            "ser Instance=True")]
+            "es\\ProyectoLPOOI\\Base\\prestamos.mdf\";Integrated Security=True;Connect Timeout=30" +
+            ";User Instance=True")]
         public string conexion {
             get {
                 return ((string)(this["conexion"]));
