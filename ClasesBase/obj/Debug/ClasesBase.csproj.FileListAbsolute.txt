@@ -26,3 +26,9 @@ D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\ClasesBase\obj\Debug\Clas
 D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\ClasesBase\bin\Debug\ClasesBase.dll.config
 D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\ClasesBase\bin\Debug\ClasesBase.dll
 D:\Facultad\LPOO1\Proyectos y soluciones\LPOOI_GRUPO07\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\Administrador\Documents\GitHub\ProyectoLPOOI\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\Administrador\Documents\GitHub\ProyectoLPOOI\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\Administrador\Documents\GitHub\ProyectoLPOOI\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\Administrador\Documents\GitHub\ProyectoLPOOI\ClasesBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\GitHub\ProyectoLPOOI\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\Administrador\Documents\GitHub\ProyectoLPOOI\ClasesBase\obj\Debug\ClasesBase.pdb
