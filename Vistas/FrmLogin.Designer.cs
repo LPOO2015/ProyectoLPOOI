@@ -88,7 +88,6 @@
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.MouseLeave += new System.EventHandler(this.btnIngresar_MouseLeave);
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            this.btnIngresar.MouseHover += new System.EventHandler(this.btnIngresar_MouseHover);
             // 
             // btnSalir
             // 
@@ -107,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 161);
+            this.ClientSize = new System.Drawing.Size(289, 183);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);

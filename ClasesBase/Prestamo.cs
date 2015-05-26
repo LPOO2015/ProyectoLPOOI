@@ -16,7 +16,6 @@ namespace ClasesBase
         private int desCodigo;
         private int perCodigo;
 
-
         public int PreNumero
         {
             get { return preNumero; }

@@ -18,32 +18,23 @@ namespace Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Cliente oCliente=new Cliente();
-            oCliente.CliApellido = txtApellido.Text;
-            oCliente.CliNombre = txtNombre.Text;
-            oCliente.CliDireccion = txtDireccion.Text;
-            oCliente.CliDNI = txtDni.Text;
-            oCliente.CliFechaNacimiento = dtpFechaNac.Value;
-            oCliente.CliIngresos = Convert.ToDecimal(txtIngresos.Text);
-            oCliente.CliSexo = txtSexo.Text;
-            oCliente.CliTelefono = txtTelefono.Text;
+            DialogResult result = MessageBox.Show("Desea Agregar el cliente", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                Cliente oCliente = new Cliente();
+                oCliente.CliApellido = txtApellido.Text;
+                oCliente.CliNombre = txtNombre.Text;
+                oCliente.CliDireccion = txtDireccion.Text;
+                oCliente.CliDNI = txtDni.Text;
+                oCliente.CliFechaNacimiento = dtpFechaNac.Value;
+                oCliente.CliIngresos = Convert.ToDecimal(txtIngresos.Text);
+                oCliente.CliSexo = txtSexo.Text;
+                oCliente.CliTelefono = txtTelefono.Text;
 
-            MessageBox.Show("Apellido: "+oCliente.CliApellido+
-                            Environment.NewLine+
-                            "Nombre: "+oCliente.CliNombre+
-                            Environment.NewLine+
-                            "Direccion: "+oCliente.CliDireccion+
-                            Environment.NewLine+
-                            "Dni: "+oCliente.CliNombre+
-                            Environment.NewLine+
-                            "Fecha de Nacimiento: "+oCliente.CliFechaNacimiento+
-                            Environment.NewLine+
-                            "Ingresos: "+oCliente.CliIngresos+
-                            Environment.NewLine+
-                            "Sexo: "+oCliente.CliSexo+
-                            Environment.NewLine+
-                            "Telefono: "+oCliente.CliTelefono
-                            );
+                TrabajarClientes.insertarCliente(oCliente);
+                this.Dispose();
+            }
         }
 
         private void btnAceptar_MouseHover(object sender, EventArgs e)

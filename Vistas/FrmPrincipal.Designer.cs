@@ -37,6 +37,9 @@
             this.mnuPrestamos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNuevoPrestamo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegistroPrestamo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPago = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewPago = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegPagos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +60,8 @@
             this.mnuPeriodos,
             this.mnuDestinos,
             this.mnuUsuarios,
-            this.mnuPrestamos});
+            this.mnuPrestamos,
+            this.mnuPago});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
@@ -67,6 +71,7 @@
             this.mnuClientes.Name = "mnuClientes";
             this.mnuClientes.Size = new System.Drawing.Size(152, 22);
             this.mnuClientes.Text = "Clientes";
+            this.mnuClientes.Click += new System.EventHandler(this.mnuClientes_Click);
             // 
             // mnuPeriodos
             // 
@@ -109,6 +114,30 @@
             this.mnuRegistroPrestamo.Name = "mnuRegistroPrestamo";
             this.mnuRegistroPrestamo.Size = new System.Drawing.Size(117, 22);
             this.mnuRegistroPrestamo.Text = "Registro";
+            this.mnuRegistroPrestamo.Click += new System.EventHandler(this.mnuRegistroPrestamo_Click);
+            // 
+            // mnuPago
+            // 
+            this.mnuPago.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuNewPago,
+            this.mnuRegPagos});
+            this.mnuPago.Name = "mnuPago";
+            this.mnuPago.Size = new System.Drawing.Size(152, 22);
+            this.mnuPago.Text = "Pagos";
+            // 
+            // mnuNewPago
+            // 
+            this.mnuNewPago.Name = "mnuNewPago";
+            this.mnuNewPago.Size = new System.Drawing.Size(152, 22);
+            this.mnuNewPago.Text = "Nuevo";
+            this.mnuNewPago.Click += new System.EventHandler(this.mnuNewPago_Click);
+            // 
+            // mnuRegPagos
+            // 
+            this.mnuRegPagos.Name = "mnuRegPagos";
+            this.mnuRegPagos.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegPagos.Text = "Registro";
+            this.mnuRegPagos.Click += new System.EventHandler(this.mnuRegPagos_Click);
             // 
             // FrmPrincipal
             // 
@@ -139,5 +168,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuPrestamos;
         private System.Windows.Forms.ToolStripMenuItem mnuNuevoPrestamo;
         private System.Windows.Forms.ToolStripMenuItem mnuRegistroPrestamo;
+        private System.Windows.Forms.ToolStripMenuItem mnuPago;
+        private System.Windows.Forms.ToolStripMenuItem mnuNewPago;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegPagos;
     }
 }

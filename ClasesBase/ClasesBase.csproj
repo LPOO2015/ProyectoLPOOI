@@ -62,6 +62,7 @@
     <Compile Include="TrabajarClientes.cs" />
     <Compile Include="TrabajarCuotas.cs" />
     <Compile Include="TrabajarDestinos.cs" />
+    <Compile Include="TrabajarPagos.cs" />
     <Compile Include="TrabajarPeriodos.cs" />
     <Compile Include="TrabajarPrestamos.cs" />
     <Compile Include="TrabajarRoles.cs" />
@@ -72,7 +73,7 @@
     <None Include="app.config" />
     <None Include="DiagramaClasesBase.cd" />
     <None Include="Properties\Settings.settings">
-      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>

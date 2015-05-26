@@ -111,7 +111,7 @@
             this.cmbRoles.FormattingEnabled = true;
             this.cmbRoles.Location = new System.Drawing.Point(111, 148);
             this.cmbRoles.Name = "cmbRoles";
-            this.cmbRoles.Size = new System.Drawing.Size(121, 21);
+            this.cmbRoles.Size = new System.Drawing.Size(100, 21);
             this.cmbRoles.TabIndex = 4;
             // 
             // lblRol

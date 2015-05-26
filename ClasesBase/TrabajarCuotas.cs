@@ -10,6 +10,22 @@ namespace ClasesBase
 {
     public class TrabajarCuotas
     {
+        public static DataTable TraerCuotas(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ConsultarCuotas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+            
+        }
         public static void insertarCuota(Cuota oCuota) 
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -27,6 +43,43 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
 
+        }
+        public static void ModificarCuota(int nroCuota)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ActualizarCuota";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@cuota", nroCuota);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+        }
+        public static Boolean BuscarCuotaPendiente(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand("consultarCuotas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+
+            SqlDataReader reader;
+            cnn.Open();
+            reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            Boolean pendiente = false;
+            while (reader.Read() && pendiente==false)
+            {
+                if(reader["CuoEstado"].ToString() == "PENDIENTE")
+                {
+                    pendiente = true;
+                }
+            }
+            cmd = null;
+            cnn.Close();
+
+            return pendiente;
         }
     }
 }

@@ -26,16 +26,28 @@ namespace Vistas
         {
             grdUsuarios.DataSource = TrabajarUsuarios.TraerUsuarios();
         }
-        public void CargarGrilla(string a,string n)
+        public void CargarGrilla(string a,string n,string o)
         {
-            grdUsuarios.DataSource = TrabajarUsuarios.TraerUsuarios(a, n);
+            grdUsuarios.DataSource = TrabajarUsuarios.TraerUsuariosSP1(a, n, o);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
             string ape = txtApellido.Text;
-            string nom = txtNombre.Text;
-            CargarGrilla(ape, nom);
+            string nom = txtUsuario.Text;
+            string ord;
+            if (rdbAscendente.Checked)
+            {
+                ord = "ASC";
+                
+            }
+            else
+            {
+                ord = "DESC";
+            }
+
+            CargarGrilla(ape, nom,ord);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

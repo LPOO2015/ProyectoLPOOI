@@ -64,11 +64,38 @@ namespace Vistas
             oFrmPrestamos.Show();
         }
 
+        private void mnuClientes_Click(object sender, EventArgs e)
+        {
+            FrmClientes oFrmClientes = new FrmClientes();
+            oFrmClientes.Show();
+        }
+
+        private void mnuRegistroPrestamo_Click(object sender, EventArgs e)
+        {
+            FrmPrestamosRealizados oFrmPrestamos = new FrmPrestamosRealizados();
+            oFrmPrestamos.Show();
+        }
+
         private void mnuDestinos_Click(object sender, EventArgs e)
         {
             FrmTablaDestinos frmTablaDestinos = new FrmTablaDestinos();
             frmTablaDestinos.Show();
+
         }
+
+        private void mnuNewPago_Click(object sender, EventArgs e)
+        {
+            FrmPagosAlta oFrmPago = new FrmPagosAlta();
+            oFrmPago.Show();
+
+        }
+
+        private void mnuRegPagos_Click(object sender, EventArgs e)
+        {
+            FrmPagos oFrmPagos = new FrmPagos();
+            oFrmPagos.Show();
+        }
+
 
     }
 }

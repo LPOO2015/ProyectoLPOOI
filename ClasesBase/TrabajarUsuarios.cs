@@ -25,6 +25,21 @@ namespace ClasesBase
 
             return dt;
         }
+        //public static DataTable TraerUsuarios()
+        //{
+        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+        //    SqlCommand cmd = new SqlCommand();
+        //    cmd.CommandText = "TraerUsuariosSP2";
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Connection = cnn;
+
+        //    DataTable dt = new DataTable();
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    da.Fill(dt);
+
+        //    return dt;
+        //}
+
         public static DataTable TraerUsuarios(string u)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -55,6 +70,24 @@ namespace ClasesBase
 
             return dt;
         }
+        public static DataTable TraerUsuariosSP1(string a, string u,string o)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ConsultarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@a", "%" + a + "%");
+            cmd.Parameters.AddWithValue("@u", "%" + u + "%");
+            cmd.Parameters.AddWithValue("@o", o);
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            
+            return dt;
+        }
+
         public static Usuario TraerUsuario(string u,string p)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -141,6 +174,21 @@ namespace ClasesBase
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable TraerUsuariosVista2()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "TraerUsuariosVista2";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
             return dt;
         }
     }

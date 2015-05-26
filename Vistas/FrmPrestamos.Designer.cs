@@ -80,7 +80,7 @@
             this.cmbClientes.Location = new System.Drawing.Point(119, 57);
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(121, 21);
-            this.cmbClientes.TabIndex = 3;
+            this.cmbClientes.TabIndex = 0;
             // 
             // cmbPeriodos
             // 
@@ -88,28 +88,28 @@
             this.cmbPeriodos.Location = new System.Drawing.Point(119, 132);
             this.cmbPeriodos.Name = "cmbPeriodos";
             this.cmbPeriodos.Size = new System.Drawing.Size(121, 21);
-            this.cmbPeriodos.TabIndex = 5;
+            this.cmbPeriodos.TabIndex = 2;
             // 
             // txtImporte
             // 
             this.txtImporte.Location = new System.Drawing.Point(119, 198);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(100, 20);
-            this.txtImporte.TabIndex = 6;
+            this.txtImporte.TabIndex = 4;
             // 
             // txtCantidadCuotas
             // 
             this.txtCantidadCuotas.Location = new System.Drawing.Point(119, 224);
             this.txtCantidadCuotas.Name = "txtCantidadCuotas";
             this.txtCantidadCuotas.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidadCuotas.TabIndex = 7;
+            this.txtCantidadCuotas.TabIndex = 5;
             // 
             // txtTasaInteres
             // 
             this.txtTasaInteres.Location = new System.Drawing.Point(119, 250);
             this.txtTasaInteres.Name = "txtTasaInteres";
             this.txtTasaInteres.Size = new System.Drawing.Size(100, 20);
-            this.txtTasaInteres.TabIndex = 8;
+            this.txtTasaInteres.TabIndex = 6;
             // 
             // lblFecha
             // 
@@ -153,14 +153,14 @@
             this.dtpfecha.Location = new System.Drawing.Point(119, 165);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(118, 20);
-            this.dtpfecha.TabIndex = 13;
+            this.dtpfecha.TabIndex = 3;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(119, 277);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 14;
+            this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -170,7 +170,7 @@
             this.btnSalir.Location = new System.Drawing.Point(200, 277);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 15;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -191,7 +191,7 @@
             this.cmbDestinos.Location = new System.Drawing.Point(119, 95);
             this.cmbDestinos.Name = "cmbDestinos";
             this.cmbDestinos.Size = new System.Drawing.Size(121, 21);
-            this.cmbDestinos.TabIndex = 17;
+            this.cmbDestinos.TabIndex = 1;
             // 
             // FrmPrestamos
             // 

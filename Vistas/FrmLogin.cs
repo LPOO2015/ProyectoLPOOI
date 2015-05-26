@@ -21,7 +21,6 @@ namespace Vistas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
             string u = txtUserName.Text;
             string p = txtPassword.Text;
             
@@ -35,11 +34,6 @@ namespace Vistas
             {
                 MessageBox.Show("Usuario y/o contraseña incorrectos");
             }
-        }
-
-        private void btnIngresar_MouseHover(object sender, EventArgs e)
-        {
-            this.btnIngresar.ForeColor = Color.Blue;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

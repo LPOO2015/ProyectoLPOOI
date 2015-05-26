@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmClientesAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,18 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagos.Designer.cs">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagosAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagosAlta.Designer.cs">
+      <DependentUpon>FrmPagosAlta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPeriodosAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +95,24 @@
     </Compile>
     <Compile Include="FrmPrestamos.Designer.cs">
       <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamosDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamosDestino.Designer.cs">
+      <DependentUpon>FrmPrestamosDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamosFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamosFechas.Designer.cs">
+      <DependentUpon>FrmPrestamosFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamosRealizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamosRealizados.Designer.cs">
+      <DependentUpon>FrmPrestamosRealizados.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -104,6 +140,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmClientesAlta.resx">
       <DependentUpon>FrmClientesAlta.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -116,12 +156,31 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagos.resx">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagosAlta.resx">
+      <DependentUpon>FrmPagosAlta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPeriodosAlta.resx">
       <DependentUpon>FrmPeriodosAlta.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamos.resx">
       <DependentUpon>FrmPrestamos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamosDestino.resx">
+      <DependentUpon>FrmPrestamosDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamosFechas.resx">
+      <DependentUpon>FrmPrestamosFechas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamosRealizados.resx">
+      <DependentUpon>FrmPrestamosRealizados.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">

@@ -61,24 +61,25 @@ namespace Vistas
                 oPrestamo.PreImporte = Convert.ToDecimal(txtImporte.Text);
                 oPrestamo.PreCantidadCuotas = Convert.ToInt32(txtCantidadCuotas.Text);
                 oPrestamo.PreTasaInteres = Convert.ToDouble(txtTasaInteres.Text);
-                oPrestamo.PreEstado = "Iniciado";
+                oPrestamo.PreEstado = "PENDIENTE";
 
-                TrabajarPrestamos.InsertarPrestamo(oPrestamo);
+                int nroPrestamo = TrabajarPrestamos.InsertarPrestamo2(oPrestamo);
 
-                Cuota oCuota=new Cuota();
+                Cuota oCuota = new Cuota();
                 oCuota.CuoImporte = (oPrestamo.PreImporte * Convert.ToDecimal(oPrestamo.PreTasaInteres) / 100) + (oPrestamo.PreImporte / oPrestamo.PreCantidadCuotas);
-                oCuota.CuoEstado = "No Pagada";
-                DateTime fechaActual=oPrestamo.PreFecha;
+                oCuota.CuoEstado ="PENDIENTE";
+                DateTime fechaActual = oPrestamo.PreFecha;
+                oCuota.PreNumero = nroPrestamo;
                 
-                for (int i = 0; i < oPrestamo.PreCantidadCuotas; i++)
+                for (int i = 1; i <= oPrestamo.PreCantidadCuotas; i++)
                 {
                     oCuota.CuoNumero = i;
-                    fechaActual.AddMonths(i);
-                    oCuota.CuoVencimiento = fechaActual;
+                    oCuota.CuoVencimiento = fechaActual.AddMonths(i);
+                    //MessageBox.Show("Fecha : " + i + " " + oCuota.CuoVencimiento);
                     TrabajarCuotas.insertarCuota(oCuota);
                 }
 
-                MessageBox.Show("Prestamo Registrado","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Prestamo Registrado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
             }
         }

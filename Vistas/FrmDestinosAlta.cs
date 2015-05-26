@@ -37,10 +37,11 @@ namespace Vistas
             oDestino.DesDescripcion = txtDescripcion.Text;
             if (codigoDestino < 0)
             {
-                TrabajarDestinos.insertDestino(oDestino);
+                TrabajarDestinos.insertarDestino(oDestino);
+                
             }
             else {
-                TrabajarDestinos.updateDestino(oDestino);
+                TrabajarDestinos.actualizarDestino(oDestino);
             }
             
             this.Dispose();

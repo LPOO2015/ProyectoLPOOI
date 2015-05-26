@@ -40,11 +40,11 @@ namespace ClasesBase
             return unDestino;
         }
 
-        public static void insertDestino(Destino destino){
+        public static void insertarDestino(Destino destino){
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "insert into Destino (DesCodigo, DesDescripcion) values(@cod, @desc)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "InsertarDestino";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@cod", destino.DesCodigo);
             cmd.Parameters.AddWithValue("@desc", destino.DesDescripcion);
@@ -54,12 +54,12 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static void updateDestino(Destino destino) {
+        public static void actualizarDestino(Destino destino) {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cnn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE Destino SET DesDescripcion=@desc WHERE DesCodigo=@cod";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "ActualizarDestino";
             cmd.Parameters.AddWithValue("@cod", destino.DesCodigo);
             cmd.Parameters.AddWithValue("@desc", destino.DesDescripcion);
 
@@ -72,8 +72,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cnn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "DELETE FROM Destino WHERE DesCodigo=@codigo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "EliminarDestino";
             cmd.Parameters.AddWithValue("@codigo",codigo);
 
             cnn.Open();
