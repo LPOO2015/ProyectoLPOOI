@@ -16,7 +16,6 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmLogin());
             
             FrmLogin ofrmLogin = new FrmLogin();
             ofrmLogin.ShowDialog();
@@ -31,8 +30,7 @@ namespace Vistas
             {
                 ofrmLogin.Dispose();
             }
-
-
+            
         }
     }
 }

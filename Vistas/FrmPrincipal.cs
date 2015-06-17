@@ -22,6 +22,8 @@ namespace Vistas
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            lblUsuario.Text = usuarioActual.UserName;
+
             Rol oRol = TrabajarRoles.TraerRol(usuarioActual.RolCodigo);
             switch (oRol.RolDescripcion)
             {
@@ -57,23 +59,11 @@ namespace Vistas
             FrmUsuarios oFrmUsuarios = new FrmUsuarios();
             oFrmUsuarios.Show();
         }
-
-        private void mnuNuevoPrestamo_Click(object sender, EventArgs e)
-        {
-            FrmPrestamos oFrmPrestamos = new FrmPrestamos();
-            oFrmPrestamos.Show();
-        }
-
+      
         private void mnuClientes_Click(object sender, EventArgs e)
         {
             FrmClientes oFrmClientes = new FrmClientes();
             oFrmClientes.Show();
-        }
-
-        private void mnuRegistroPrestamo_Click(object sender, EventArgs e)
-        {
-            FrmPrestamosRealizados oFrmPrestamos = new FrmPrestamosRealizados();
-            oFrmPrestamos.Show();
         }
 
         private void mnuDestinos_Click(object sender, EventArgs e)
@@ -83,19 +73,36 @@ namespace Vistas
 
         }
 
-        private void mnuNewPago_Click(object sender, EventArgs e)
+        private void mnuNuevoPrestamo_Click(object sender, EventArgs e)
         {
-            FrmPagosAlta oFrmPago = new FrmPagosAlta();
-            oFrmPago.Show();
+            FrmPrestamos oFrmPrestamos = new FrmPrestamos();
+            oFrmPrestamos.Show();
+        }        
 
-        }
-
-        private void mnuRegPagos_Click(object sender, EventArgs e)
+        private void mnuRegistroPago_Click(object sender, EventArgs e)
         {
             FrmPagos oFrmPagos = new FrmPagos();
             oFrmPagos.Show();
         }
 
+        private void mnuNuevoPago_Click(object sender, EventArgs e)
+        {
+            FrmPagosAlta oFrmPago = new FrmPagosAlta();
+            oFrmPago.Show();
+        }
 
+        private void mnuNuevoPrestamo_Click_1(object sender, EventArgs e)
+        {
+            FrmPrestamos oFrmPrestamos = new FrmPrestamos();
+            oFrmPrestamos.Show();
+        }
+
+        private void mnuRegistroPrestamo_Click(object sender, EventArgs e)
+        {
+            FrmPrestamosRealizados oFrmPrestamos = new FrmPrestamosRealizados();
+            oFrmPrestamos.Show();
+        }
+
+ 
     }
 }
