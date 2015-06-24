@@ -29,7 +29,7 @@ namespace Vistas
                 oCliente.CliDNI = txtDni.Text;
                 oCliente.CliFechaNacimiento = dtpFechaNac.Value;
                 oCliente.CliIngresos = Convert.ToDecimal(txtIngresos.Text);
-                oCliente.CliSexo = txtSexo.Text;
+                oCliente.CliSexo = cmbSexo.SelectedItem.ToString();
                 oCliente.CliTelefono = txtTelefono.Text;
 
                 TrabajarClientes.insertarCliente(oCliente);
@@ -62,6 +62,11 @@ namespace Vistas
             this.btnSalir.ForeColor = Color.Black;
         }
 
-
+        private void FrmClientesAlta_Load(object sender, EventArgs e)
+        {
+            cmbSexo.Items.Add("Masculino");
+            cmbSexo.Items.Add("Femenino");
+            cmbSexo.SelectedIndex = 0;
+        }
     }
 }

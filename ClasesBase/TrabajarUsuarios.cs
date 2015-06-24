@@ -15,8 +15,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from Usuario";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "TraerUsuariosSP2";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             DataTable dt = new DataTable();
@@ -24,52 +24,59 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
-        }
-        //public static DataTable TraerUsuarios()
-        //{
-        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
-        //    SqlCommand cmd = new SqlCommand();
-        //    cmd.CommandText = "TraerUsuariosSP2";
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Connection = cnn;
-
-        //    DataTable dt = new DataTable();
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //    da.Fill(dt);
-
-        //    return dt;
-        //}
-
+        }        
         public static DataTable TraerUsuarios(string u)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from Usuario where UserName like @u";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "TraerUsuariosSP1";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-            cmd.Parameters.AddWithValue("@u", "%" + u + "%");
+
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            SqlParameter param;
+            param = new SqlParameter("@u",SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = u;
+            da.SelectCommand.Parameters.Add(param);
+
             da.Fill(dt);
 
             return dt;
         }
+        /*
         public static DataTable TraerUsuarios(string a,string n)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from Usuario where Apellido like @a and Nombre like @n";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "TraerUsuariosSP3";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-            cmd.Parameters.AddWithValue("@a", "%" + a + "%");
-            cmd.Parameters.AddWithValue("@n", "%" + n + "%");
 
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            SqlParameter param;
+            param = new SqlParameter("@a", SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = a;
+
+            SqlParameter param2;
+            param2 = new SqlParameter("@n", SqlDbType.VarChar);
+            param2.Direction = ParameterDirection.Input;
+            param2.Value = n;
+
+            da.SelectCommand.Parameters.Add(param);
+            da.SelectCommand.Parameters.Add(param2);
+
             da.Fill(dt);
 
             return dt;
         }
+         */
+
         public static DataTable TraerUsuariosSP1(string a, string u,string o)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);

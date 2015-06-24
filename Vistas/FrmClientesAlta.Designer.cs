@@ -40,12 +40,12 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.lblIngresos = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.txtIngresos = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtApellido
@@ -114,7 +114,7 @@
             // 
             this.txtDni.Location = new System.Drawing.Point(163, 110);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(100, 20);
+            this.txtDni.Size = new System.Drawing.Size(127, 20);
             this.txtDni.TabIndex = 3;
             // 
             // txtDireccion
@@ -146,15 +146,8 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(163, 230);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(127, 20);
             this.txtTelefono.TabIndex = 7;
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(163, 200);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(100, 20);
-            this.txtSexo.TabIndex = 6;
             // 
             // lblIngresos
             // 
@@ -178,7 +171,7 @@
             // 
             this.txtIngresos.Location = new System.Drawing.Point(163, 170);
             this.txtIngresos.Name = "txtIngresos";
-            this.txtIngresos.Size = new System.Drawing.Size(100, 20);
+            this.txtIngresos.Size = new System.Drawing.Size(127, 20);
             this.txtIngresos.TabIndex = 5;
             // 
             // btnSalir
@@ -198,20 +191,28 @@
             this.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNac.Location = new System.Drawing.Point(163, 139);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaNac.Size = new System.Drawing.Size(127, 20);
             this.dtpFechaNac.TabIndex = 4;
+            // 
+            // cmbSexo
+            // 
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Location = new System.Drawing.Point(163, 196);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(127, 21);
+            this.cmbSexo.TabIndex = 18;
             // 
             // FrmClientesAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 321);
+            this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtSexo);
             this.Controls.Add(this.lblIngresos);
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.txtIngresos);
@@ -226,6 +227,7 @@
             this.Controls.Add(this.txtApellido);
             this.Name = "FrmClientesAlta";
             this.Text = "Alta de Clientes";
+            this.Load += new System.EventHandler(this.FrmClientesAlta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,11 +247,11 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Label lblIngresos;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.TextBox txtIngresos;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.ComboBox cmbSexo;
     }
 }

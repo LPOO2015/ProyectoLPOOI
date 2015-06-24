@@ -27,7 +27,7 @@ namespace Vistas
             usuarioActual = TrabajarUsuarios.TraerUsuario(u, p);
             if (usuarioActual != null)
             {
-                MessageBox.Show("Bienvenido Usuario:" + usuarioActual.UserName);
+                MessageBox.Show("Bienvenido Usuario: " + usuarioActual.UserName);
                 this.DialogResult = DialogResult.OK;
             }
             else

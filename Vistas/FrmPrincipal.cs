@@ -103,6 +103,12 @@ namespace Vistas
             oFrmPrestamos.Show();
         }
 
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPrestamosConsulta oFrmPrestamosConsulta = new FrmPrestamosConsulta();
+            oFrmPrestamosConsulta.Show();
+        }
+
  
     }
 }

@@ -14,7 +14,7 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select Cliente.CliNombre,Destino.DesDescripcion,PreFecha,PreImporte,Periodo.PerDescripcion,PreCantidadCuotas,PreTasaInteres " +
+            cmd.CommandText = "select PreNumero,Cliente.CliNombre,Destino.DesDescripcion,PreFecha,PreImporte,Periodo.PerDescripcion,PreCantidadCuotas,PreTasaInteres " +
                 "from Prestamo,Cliente,Destino,Periodo " +
                 "where Prestamo.CliDni = Cliente.CliDni and " +
                 "Prestamo.DesCodigo = Destino.DesCodigo and " +
@@ -27,6 +27,24 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+
+        public static DataTable TraerPrestamos(string codigo,string nombre)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ConsultarPrestamoCodigo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@cli", nombre);
+            cmd.Parameters.AddWithValue("@cod", codigo);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
+        
+        
         public static DataTable TraerPrestamos(string dni)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);

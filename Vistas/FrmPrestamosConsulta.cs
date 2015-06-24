@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+using ClasesBase;
+
+namespace Vistas
+{
+    public partial class FrmPrestamosConsulta : Form
+    {
+        public FrmPrestamosConsulta()
+        {
+            InitializeComponent();
+        }
+
+        public void cargarGrilla()
+        {
+            grdPrestamos.DataSource = TrabajarPrestamos.TraerPrestamos();
+        }
+
+        public void cargarGrilla(string cod, string nombre)
+        {
+            grdPrestamos.DataSource = TrabajarPrestamos.TraerPrestamos(cod,nombre);
+        }
+
+        private void FrmPrestamosConsulta_Load(object sender, EventArgs e)
+        {
+            cargarGrilla();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtCliente.Text;
+            string cod = txtCliente.Text;
+            cargarGrilla(cod,nombre);
+        }
+    }
+}

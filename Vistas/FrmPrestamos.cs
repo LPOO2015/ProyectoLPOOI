@@ -74,9 +74,24 @@ namespace Vistas
                 for (int i = 1; i <= oPrestamo.PreCantidadCuotas; i++)
                 {
                     oCuota.CuoNumero = i;
-                    oCuota.CuoVencimiento = fechaActual.AddMonths(i);
-                    //MessageBox.Show("Fecha : " + i + " " + oCuota.CuoVencimiento);
-                    TrabajarCuotas.insertarCuota(oCuota);
+
+                    switch (oPrestamo.PerCodigo)
+                    {
+                        case 1:
+                            oCuota.CuoVencimiento = fechaActual.AddDays(i*7);
+                            TrabajarCuotas.insertarCuota(oCuota);
+                            break;
+                        case 2:
+                            oCuota.CuoVencimiento = fechaActual.AddMonths(i);
+                            TrabajarCuotas.insertarCuota(oCuota);
+                            break;
+                        case 3:
+                            oCuota.CuoVencimiento = fechaActual.AddYears(i);
+                            TrabajarCuotas.insertarCuota(oCuota);
+                            break;
+                    }
+
+                    
                 }
 
                 MessageBox.Show("Prestamo Registrado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -72,27 +72,27 @@
             // mnuClientes
             // 
             this.mnuClientes.Name = "mnuClientes";
-            this.mnuClientes.Size = new System.Drawing.Size(152, 22);
+            this.mnuClientes.Size = new System.Drawing.Size(120, 22);
             this.mnuClientes.Text = "Clientes";
             this.mnuClientes.Click += new System.EventHandler(this.mnuClientes_Click);
             // 
             // mnuPeriodos
             // 
             this.mnuPeriodos.Name = "mnuPeriodos";
-            this.mnuPeriodos.Size = new System.Drawing.Size(152, 22);
+            this.mnuPeriodos.Size = new System.Drawing.Size(120, 22);
             this.mnuPeriodos.Text = "Periodos";
             // 
             // mnuDestinos
             // 
             this.mnuDestinos.Name = "mnuDestinos";
-            this.mnuDestinos.Size = new System.Drawing.Size(152, 22);
+            this.mnuDestinos.Size = new System.Drawing.Size(120, 22);
             this.mnuDestinos.Text = "Destinos";
             this.mnuDestinos.Click += new System.EventHandler(this.mnuDestinos_Click);
             // 
             // mnuUsuarios
             // 
             this.mnuUsuarios.Name = "mnuUsuarios";
-            this.mnuUsuarios.Size = new System.Drawing.Size(152, 22);
+            this.mnuUsuarios.Size = new System.Drawing.Size(120, 22);
             this.mnuUsuarios.Text = "Usuarios";
             this.mnuUsuarios.Click += new System.EventHandler(this.mnuUsuarios_Click);
             // 
@@ -125,6 +125,7 @@
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // mnuPagos
             // 
@@ -138,14 +139,14 @@
             // mnuNuevoPago
             // 
             this.mnuNuevoPago.Name = "mnuNuevoPago";
-            this.mnuNuevoPago.Size = new System.Drawing.Size(152, 22);
+            this.mnuNuevoPago.Size = new System.Drawing.Size(117, 22);
             this.mnuNuevoPago.Text = "Nuevo";
             this.mnuNuevoPago.Click += new System.EventHandler(this.mnuNuevoPago_Click);
             // 
             // mnuRegistroPago
             // 
             this.mnuRegistroPago.Name = "mnuRegistroPago";
-            this.mnuRegistroPago.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegistroPago.Size = new System.Drawing.Size(117, 22);
             this.mnuRegistroPago.Text = "Registro";
             this.mnuRegistroPago.Click += new System.EventHandler(this.mnuRegistroPago_Click);
             // 

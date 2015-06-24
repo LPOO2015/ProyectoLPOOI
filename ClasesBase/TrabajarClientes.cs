@@ -14,12 +14,15 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from Cliente";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "TraerClientes";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
+
+            
 
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+
             da.Fill(dt);
             return dt;
         }
