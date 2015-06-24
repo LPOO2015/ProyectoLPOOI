@@ -89,9 +89,7 @@ namespace Vistas
                             oCuota.CuoVencimiento = fechaActual.AddYears(i);
                             TrabajarCuotas.insertarCuota(oCuota);
                             break;
-                    }
-
-                    
+                    }                    
                 }
 
                 MessageBox.Show("Prestamo Registrado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);

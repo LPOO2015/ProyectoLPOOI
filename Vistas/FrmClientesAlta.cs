@@ -11,6 +11,9 @@ namespace Vistas
 {
     public partial class FrmClientesAlta : Form
     {
+        public string dni { get; set; }
+        public Boolean modifica= false;
+
         public FrmClientesAlta()
         {
             InitializeComponent();
@@ -32,8 +35,16 @@ namespace Vistas
                 oCliente.CliSexo = cmbSexo.SelectedItem.ToString();
                 oCliente.CliTelefono = txtTelefono.Text;
 
-                TrabajarClientes.insertarCliente(oCliente);
-                this.Dispose();
+                if (modifica)
+                {
+                    TrabajarClientes.modificarCliente(oCliente);
+                    this.Dispose();
+                }
+                else
+                {
+                    TrabajarClientes.insertarCliente(oCliente);
+                    this.Dispose();
+                }                
             }
         }
 
@@ -67,6 +78,30 @@ namespace Vistas
             cmbSexo.Items.Add("Masculino");
             cmbSexo.Items.Add("Femenino");
             cmbSexo.SelectedIndex = 0;
+
+            if (dni!="")
+            {                
+                Cliente oCliente = TrabajarClientes.TraerCliente(dni);
+                txtApellido.Text = oCliente.CliApellido;
+                txtNombre.Text = oCliente.CliNombre;
+                txtDireccion.Text = oCliente.CliDireccion;
+                txtDni.Text = oCliente.CliDNI;                
+                dtpFechaNac.Value = oCliente.CliFechaNacimiento;
+                txtIngresos.Text = oCliente.CliIngresos.ToString();
+                txtTelefono.Text = oCliente.CliTelefono;
+
+                if (oCliente.CliSexo == "Masculino")
+                {
+                    cmbSexo.SelectedIndex = 0;
+                }
+                else
+                {
+                    cmbSexo.SelectedIndex = 1;
+                }
+
+                txtDni.Enabled = false;
+                modifica = true;
+            }
         }
     }
 }

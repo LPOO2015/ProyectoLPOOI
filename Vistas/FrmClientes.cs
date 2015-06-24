@@ -49,5 +49,16 @@ namespace Vistas
             CargarGrilla();
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (grdClientes.CurrentRow != null)
+            {
+                FrmClientesAlta oFrmClientesAlta = new FrmClientesAlta();
+                oFrmClientesAlta.dni = grdClientes.CurrentRow.Cells[0].Value.ToString();
+                oFrmClientesAlta.ShowDialog();
+                CargarGrilla();
+            }
+        }
     }
 }

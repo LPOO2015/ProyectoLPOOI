@@ -90,12 +90,6 @@
     <Compile Include="FrmPeriodosAlta.Designer.cs">
       <DependentUpon>FrmPeriodosAlta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrestamoAnular.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPrestamoAnular.Designer.cs">
-      <DependentUpon>FrmPrestamoAnular.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,10 +172,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPeriodosAlta.resx">
       <DependentUpon>FrmPeriodosAlta.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrestamoAnular.resx">
-      <DependentUpon>FrmPrestamoAnular.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamos.resx">

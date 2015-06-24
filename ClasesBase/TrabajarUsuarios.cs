@@ -24,7 +24,36 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
-        }        
+        }
+
+        public static Usuario TraerUsuario(string u, string p)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from Usuario where UserName=@u and Password=@p";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@u", u);
+            cmd.Parameters.AddWithValue("@p", p);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Usuario oUsuario = null;
+            if (reader.Read() == true)
+            {
+                oUsuario = new Usuario();
+                oUsuario.UserName = (string)reader["UserName"];
+                oUsuario.Password = (string)reader["Password"];
+                oUsuario.Apellido = (string)reader["Apellido"];
+                oUsuario.Nombre = (string)reader["Nombre"];
+                oUsuario.RolCodigo = (int)reader["RolCodigo"];
+                return oUsuario;
+
+            }
+            cnn.Close();
+            return oUsuario;
+        }
+
+        /*
         public static DataTable TraerUsuarios(string u)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -46,7 +75,7 @@ namespace ClasesBase
 
             return dt;
         }
-        /*
+        
         public static DataTable TraerUsuarios(string a,string n)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -75,6 +104,10 @@ namespace ClasesBase
 
             return dt;
         }
+         * 
+        
+         * 
+         * 
          */
 
         public static DataTable TraerUsuariosSP1(string a, string u,string o)
@@ -95,32 +128,7 @@ namespace ClasesBase
             return dt;
         }
 
-        public static Usuario TraerUsuario(string u,string p)
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from Usuario where UserName=@u and Password=@p";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-            cmd.Parameters.AddWithValue("@u",u);
-            cmd.Parameters.AddWithValue("@p",p);
-            cnn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            Usuario oUsuario = null;
-            if(reader.Read() ==true)
-            {
-                oUsuario = new Usuario();
-                oUsuario.UserName = (string)reader["UserName"];
-                oUsuario.Password = (string)reader["Password"];
-                oUsuario.Apellido = (string)reader["Apellido"];
-                oUsuario.Nombre = (string)reader["Nombre"];
-                oUsuario.RolCodigo = (int)reader["RolCodigo"];
-                return oUsuario;
-
-            }
-            cnn.Close();
-            return oUsuario;
-        }
+        
         public static void InsertarUsuario(Usuario oUsuario) 
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
