@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class FrmPrestamos
+    partial class FrmPrestamoNuevo
     {
         /// <summary>
         /// Required designer variable.

@@ -75,7 +75,7 @@ namespace Vistas
 
         private void mnuNuevoPrestamo_Click(object sender, EventArgs e)
         {
-            FrmPrestamos oFrmPrestamos = new FrmPrestamos();
+            FrmPrestamoNuevo oFrmPrestamos = new FrmPrestamoNuevo();
             oFrmPrestamos.Show();
         }        
 
@@ -93,7 +93,7 @@ namespace Vistas
 
         private void mnuNuevoPrestamo_Click_1(object sender, EventArgs e)
         {
-            FrmPrestamos oFrmPrestamos = new FrmPrestamos();
+            FrmPrestamoNuevo oFrmPrestamos = new FrmPrestamoNuevo();
             oFrmPrestamos.Show();
         }
 
