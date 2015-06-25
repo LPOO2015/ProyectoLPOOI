@@ -97,12 +97,7 @@ namespace Vistas
             oFrmPrestamos.Show();
         }
 
-        private void mnuRegistroPrestamo_Click(object sender, EventArgs e)
-        {
-            FrmPrestamosRealizados oFrmPrestamos = new FrmPrestamosRealizados();
-            oFrmPrestamos.Show();
-        }
-
+        
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmPrestamosConsulta oFrmPrestamosConsulta = new FrmPrestamosConsulta();

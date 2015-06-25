@@ -36,7 +36,6 @@
             this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrestamos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNuevoPrestamo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRegistroPrestamo = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPagos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNuevoPago = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +99,6 @@
             // 
             this.mnuPrestamos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuNuevoPrestamo,
-            this.mnuRegistroPrestamo,
             this.consultarToolStripMenuItem});
             this.mnuPrestamos.Name = "mnuPrestamos";
             this.mnuPrestamos.Size = new System.Drawing.Size(74, 20);
@@ -110,15 +108,8 @@
             // 
             this.mnuNuevoPrestamo.Name = "mnuNuevoPrestamo";
             this.mnuNuevoPrestamo.Size = new System.Drawing.Size(152, 22);
-            this.mnuNuevoPrestamo.Text = "Nuevo";
+            this.mnuNuevoPrestamo.Text = "Registrar";
             this.mnuNuevoPrestamo.Click += new System.EventHandler(this.mnuNuevoPrestamo_Click_1);
-            // 
-            // mnuRegistroPrestamo
-            // 
-            this.mnuRegistroPrestamo.Name = "mnuRegistroPrestamo";
-            this.mnuRegistroPrestamo.Size = new System.Drawing.Size(152, 22);
-            this.mnuRegistroPrestamo.Text = "Registro";
-            this.mnuRegistroPrestamo.Click += new System.EventHandler(this.mnuRegistroPrestamo_Click);
             // 
             // consultarToolStripMenuItem
             // 
@@ -139,15 +130,15 @@
             // mnuNuevoPago
             // 
             this.mnuNuevoPago.Name = "mnuNuevoPago";
-            this.mnuNuevoPago.Size = new System.Drawing.Size(117, 22);
-            this.mnuNuevoPago.Text = "Nuevo";
+            this.mnuNuevoPago.Size = new System.Drawing.Size(152, 22);
+            this.mnuNuevoPago.Text = "Registrar";
             this.mnuNuevoPago.Click += new System.EventHandler(this.mnuNuevoPago_Click);
             // 
             // mnuRegistroPago
             // 
             this.mnuRegistroPago.Name = "mnuRegistroPago";
-            this.mnuRegistroPago.Size = new System.Drawing.Size(117, 22);
-            this.mnuRegistroPago.Text = "Registro";
+            this.mnuRegistroPago.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegistroPago.Text = "Consultar";
             this.mnuRegistroPago.Click += new System.EventHandler(this.mnuRegistroPago_Click);
             // 
             // lblUsuario
@@ -202,7 +193,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuUsuarios;
         private System.Windows.Forms.ToolStripMenuItem mnuPrestamos;
         private System.Windows.Forms.ToolStripMenuItem mnuNuevoPrestamo;
-        private System.Windows.Forms.ToolStripMenuItem mnuRegistroPrestamo;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuPagos;
         private System.Windows.Forms.ToolStripMenuItem mnuNuevoPago;

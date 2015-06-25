@@ -59,5 +59,17 @@ namespace Vistas
             }
             
         }
+
+        private void btnDestinos_Click(object sender, EventArgs e)
+        {
+            FrmPrestamosDestino oFrmPrestDes = new FrmPrestamosDestino();
+            oFrmPrestDes.Show();
+        }
+
+        private void btnFechas_Click(object sender, EventArgs e)
+        {
+            FrmPrestamosFechas oFrmPrestFechas = new FrmPrestamosFechas();
+            oFrmPrestFechas.Show();
+        }
     }
 }
