@@ -31,6 +31,8 @@ namespace Vistas
         public void CargarGrillaPagos(string dni)
         {
             grdPagos.DataSource = TrabajarPagos.TraerPagosCliente(dni);
+            lblPagos.Text = Convert.ToString(TrabajarPagos.CantidadPagos(dni));
+            lblTotalPagos.Text = Convert.ToString(TrabajarPagos.ImporteTotal(dni));
         }
 
         private void cmbCliente_SelectionChangeCommitted(object sender, EventArgs e)

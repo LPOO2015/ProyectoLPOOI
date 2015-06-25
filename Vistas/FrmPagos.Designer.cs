@@ -32,6 +32,10 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.lblCantidadPagos = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPagos = new System.Windows.Forms.Label();
+            this.lblTotalPagos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdPagos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +47,7 @@
             this.grdPagos.Location = new System.Drawing.Point(1, 66);
             this.grdPagos.Name = "grdPagos";
             this.grdPagos.ReadOnly = true;
-            this.grdPagos.Size = new System.Drawing.Size(732, 295);
+            this.grdPagos.Size = new System.Drawing.Size(735, 228);
             this.grdPagos.TabIndex = 3;
             // 
             // lblTitulo
@@ -74,11 +78,51 @@
             this.lblCliente.TabIndex = 19;
             this.lblCliente.Text = "Cliente";
             // 
+            // lblCantidadPagos
+            // 
+            this.lblCantidadPagos.AutoSize = true;
+            this.lblCantidadPagos.Location = new System.Drawing.Point(75, 321);
+            this.lblCantidadPagos.Name = "lblCantidadPagos";
+            this.lblCantidadPagos.Size = new System.Drawing.Size(97, 13);
+            this.lblCantidadPagos.TabIndex = 20;
+            this.lblCantidadPagos.Text = "Cantidad de Pagos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(430, 320);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Total ";
+            // 
+            // lblPagos
+            // 
+            this.lblPagos.AutoSize = true;
+            this.lblPagos.Location = new System.Drawing.Point(208, 320);
+            this.lblPagos.Name = "lblPagos";
+            this.lblPagos.Size = new System.Drawing.Size(44, 13);
+            this.lblPagos.TabIndex = 22;
+            this.lblPagos.Text = "muestra";
+            // 
+            // lblTotalPagos
+            // 
+            this.lblTotalPagos.AutoSize = true;
+            this.lblTotalPagos.Location = new System.Drawing.Point(527, 321);
+            this.lblTotalPagos.Name = "lblTotalPagos";
+            this.lblTotalPagos.Size = new System.Drawing.Size(44, 13);
+            this.lblTotalPagos.TabIndex = 23;
+            this.lblTotalPagos.Text = "muestra";
+            // 
             // FrmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 362);
+            this.Controls.Add(this.lblTotalPagos);
+            this.Controls.Add(this.lblPagos);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCantidadPagos);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.lblTitulo);
@@ -98,5 +142,9 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Label lblCantidadPagos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPagos;
+        private System.Windows.Forms.Label lblTotalPagos;
     }
 }

@@ -42,5 +42,50 @@ namespace ClasesBase
             cnn.Close();
 
         }
+        public static int CantidadPagos(String dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ContarPagos";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@dni", dni);
+            SqlParameter param;
+            param = new SqlParameter("@CantidadPagos", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            int cantidad = Convert.ToInt32(cmd.Parameters["@CantidadPagos"].Value);
+            cnn.Close();
+            return cantidad;
+        }
+        public static decimal ImporteTotal(String dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SumarPagos";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@dni", dni);
+            SqlParameter param;
+            param = new SqlParameter("@total", SqlDbType.Decimal);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            decimal total;
+            if (cmd.Parameters["@total"].Value != DBNull.Value)
+            {
+                total = Convert.ToDecimal(cmd.Parameters["@total"].Value);
+            }
+            else
+            {
+                total = 0;
+            }
+
+            cnn.Close();
+            return total;
+        }
     }
 }
