@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNumPrestamo = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.btnAnular = new System.Windows.Forms.Button();
+            this.btnCuotas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.grdPrestamos.Location = new System.Drawing.Point(12, 57);
             this.grdPrestamos.Name = "grdPrestamos";
             this.grdPrestamos.ReadOnly = true;
-            this.grdPrestamos.Size = new System.Drawing.Size(609, 200);
+            this.grdPrestamos.Size = new System.Drawing.Size(892, 388);
             this.grdPrestamos.TabIndex = 0;
             // 
             // btnFiltrar
@@ -91,21 +91,22 @@
             this.txtCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCliente.TabIndex = 5;
             // 
-            // btnAnular
+            // btnCuotas
             // 
-            this.btnAnular.Location = new System.Drawing.Point(483, 274);
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(75, 23);
-            this.btnAnular.TabIndex = 6;
-            this.btnAnular.Text = "Anular";
-            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnCuotas.Location = new System.Drawing.Point(472, 20);
+            this.btnCuotas.Name = "btnCuotas";
+            this.btnCuotas.Size = new System.Drawing.Size(75, 23);
+            this.btnCuotas.TabIndex = 6;
+            this.btnCuotas.Text = "Ver Cuotas";
+            this.btnCuotas.UseVisualStyleBackColor = true;
+            this.btnCuotas.Click += new System.EventHandler(this.btnCuotas_Click);
             // 
             // FrmPrestamosConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 320);
-            this.Controls.Add(this.btnAnular);
+            this.ClientSize = new System.Drawing.Size(916, 457);
+            this.Controls.Add(this.btnCuotas);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtNumPrestamo);
             this.Controls.Add(this.label2);
@@ -129,6 +130,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNumPrestamo;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.Button btnAnular;
+        private System.Windows.Forms.Button btnCuotas;
     }
 }

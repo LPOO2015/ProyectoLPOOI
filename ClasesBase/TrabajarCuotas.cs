@@ -81,5 +81,30 @@ namespace ClasesBase
 
             return pendiente;
         }
+
+        public static Boolean BuscarCuotaPagada(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand("consultarCuotas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+
+            SqlDataReader reader;
+            cnn.Open();
+            reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            Boolean pagada = false;
+
+            while (reader.Read() && pagada == false)
+            {
+                if (reader["CuoEstado"].ToString() == "PAGADA")
+                {
+                    pagada = true;
+                }
+            }
+            cmd = null;
+            cnn.Close();
+
+            return pagada;
+        }
     }
 }

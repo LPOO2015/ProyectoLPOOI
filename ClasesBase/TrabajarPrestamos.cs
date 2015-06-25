@@ -14,7 +14,7 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select PreNumero,Cliente.CliNombre,Destino.DesDescripcion,PreFecha,PreImporte,Periodo.PerDescripcion,PreCantidadCuotas,PreTasaInteres " +
+            cmd.CommandText = "select PreNumero,Cliente.CliNombre,Destino.DesDescripcion,PreFecha,PreImporte,Periodo.PerDescripcion,PreCantidadCuotas,PreTasaInteres,PreEstado " +
                 "from Prestamo,Cliente,Destino,Periodo " +
                 "where Prestamo.CliDni = Cliente.CliDni and " +
                 "Prestamo.DesCodigo = Destino.DesCodigo and " +
@@ -168,11 +168,26 @@ namespace ClasesBase
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@nroPrestamo", nroPrestamo);
+            cmd.Parameters.AddWithValue("@estado", "CANCELADO");
 
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
+        }
 
+        public static void AnularPrestamo(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ActualizarPrestamo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@nroPrestamo", nroPrestamo);
+            cmd.Parameters.AddWithValue("@estado", "ANULADO");
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
         }
     }
 }

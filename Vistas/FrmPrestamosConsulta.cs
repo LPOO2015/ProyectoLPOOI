@@ -39,5 +39,25 @@ namespace Vistas
             string cod = txtCliente.Text;
             cargarGrilla(cod,nombre);
         }
+
+        private void btnCuotas_Click(object sender, EventArgs e)
+        {
+            if (grdPrestamos.CurrentRow != null)
+            {
+                FrmPrestamosVerCuotas oFrmPrestamosVerCuotas = new FrmPrestamosVerCuotas();
+                oFrmPrestamosVerCuotas.nroPrestamo = (int)grdPrestamos.CurrentRow.Cells[0].Value;
+                if (grdPrestamos.CurrentRow.Cells[8].Value.ToString() == "ANULADO")
+                {
+                    oFrmPrestamosVerCuotas.anulado = false;
+                }
+                else
+                {
+                    oFrmPrestamosVerCuotas.anulado = true;
+                }
+                oFrmPrestamosVerCuotas.ShowDialog();
+                cargarGrilla();
+            }
+            
+        }
     }
 }
