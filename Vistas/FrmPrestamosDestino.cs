@@ -31,8 +31,24 @@ namespace Vistas
 
         private void cmbDestino_SelectionChangeCommitted(object sender, EventArgs e)
         {
-           int destino = (int)cmbDestino.SelectedValue;
-           grdPrestamosDestino.DataSource = TrabajarPrestamos.TraerPrestamos(destino);
+            int destino = (int)cmbDestino.SelectedValue;
+            grdPrestamosDestino.DataSource = TrabajarPrestamos.TraerPrestamos(destino);
+            ContarPrestamosEstado(destino);
+        }
+        
+        public void ContarPrestamosEstado(int destino)
+        {
+            int ot = 0;
+            int pen = 0;
+            int can = 0;
+            int anu = 0;
+            
+            TrabajarPrestamos.ContarPrestamoEstado(destino, ref ot, ref pen, ref can, ref anu);
+
+            lblotorgados.Text = Convert.ToString(ot);
+            lblpendientes.Text = Convert.ToString(pen);
+            lblcancelados.Text = Convert.ToString(can);
+            lblanulados.Text = Convert.ToString(anu);
         }
     }
 }

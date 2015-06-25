@@ -96,6 +96,43 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static void ContarPrestamoEstado(int destino, ref int otorgados, ref int pendientes, ref int cancelados, ref int anulados) {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ConsultarPrestamoEstado";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@Destino", destino);
+
+            SqlParameter parameter;
+            parameter = new SqlParameter("@Otorgados", SqlDbType.Int);
+            parameter.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(parameter);
+
+            parameter = new SqlParameter("@Pendientes", SqlDbType.Int);
+            parameter.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(parameter);
+
+            parameter = new SqlParameter("@Cancelados", SqlDbType.Int);
+            parameter.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(parameter);
+
+            parameter = new SqlParameter("@Anulados", SqlDbType.Int);
+            parameter.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(parameter);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            otorgados = Convert.ToInt32(cmd.Parameters["@Otorgados"].Value);
+            pendientes = Convert.ToInt32(cmd.Parameters["@Pendientes"].Value);
+            cancelados = Convert.ToInt32(cmd.Parameters["@Cancelados"].Value);
+            anulados = Convert.ToInt32(cmd.Parameters["@Anulados"].Value);
+
+            cnn.Close();
+
+        }
         public static int InsertarPrestamo2(Prestamo oPrestamo) 
         {
             
