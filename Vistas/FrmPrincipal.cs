@@ -104,6 +104,12 @@ namespace Vistas
             oFrmPrestamosConsulta.Show();
         }
 
+        private void mnuPeriodos_Click(object sender, EventArgs e)
+        {
+            FrmTablaPeriodos oFrmTablaPeriodos = new FrmTablaPeriodos();
+            oFrmTablaPeriodos.Show();
+        }
+
  
     }
 }

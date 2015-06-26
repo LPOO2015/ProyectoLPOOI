@@ -12,6 +12,21 @@ namespace Vistas
 {
     public partial class FrmPeriodosAlta : Form
     {
+        private int CodigoPeriodo;
+
+        public int CodigoPeriodo1
+        {
+            get { return CodigoPeriodo; }
+            set { CodigoPeriodo = value; }
+        }
+
+        private int CodPeriodoABuscar;
+
+        public int CodPeriodo1
+        {
+            get { return CodPeriodoABuscar; }
+            set { CodPeriodoABuscar = value; }
+        }
         public FrmPeriodosAlta()
         {
             InitializeComponent();
@@ -27,13 +42,15 @@ namespace Vistas
             Periodo oPeriodo = new Periodo();
             oPeriodo.PerCodigo = Convert.ToInt32(txtCodigo.Text);
             oPeriodo.PerDescripcion = txtDescripcion.Text;
-            MessageBox.Show("Codigo: "+
-                            oPeriodo.PerCodigo+
-                            Environment.NewLine+
-                            "Descripcion: "+
-                            oPeriodo.PerDescripcion
-                            );
 
+            if (CodigoPeriodo < 0)
+            {
+                TrabajarPeriodos.insertarPeriodo(oPeriodo);
+            }
+            else {
+                TrabajarPeriodos.actualizarPeriodo(oPeriodo);
+            }
+            this.Dispose();
         }
 
         private void btnAgregar_MouseHover(object sender, EventArgs e)
@@ -54,6 +71,21 @@ namespace Vistas
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
             this.btnAgregar.ForeColor = Color.Blue;
+        }
+
+        private void FrmPeriodosAlta_Load(object sender, EventArgs e)
+        {
+            if (CodigoPeriodo != -1)
+            {
+                Periodo oPeriodo = TrabajarPeriodos.traerPeriodo(CodPeriodoABuscar);
+                txtCodigo.Text = oPeriodo.PerCodigo.ToString();
+                txtDescripcion.Text =oPeriodo.PerDescripcion;
+                txtCodigo.Enabled = false;
+            }
+            else
+            {
+                txtCodigo.Enabled = true;
+            }
         }
     }
 }

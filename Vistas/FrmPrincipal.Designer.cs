@@ -72,27 +72,28 @@
             // mnuClientes
             // 
             this.mnuClientes.Name = "mnuClientes";
-            this.mnuClientes.Size = new System.Drawing.Size(120, 22);
+            this.mnuClientes.Size = new System.Drawing.Size(152, 22);
             this.mnuClientes.Text = "Clientes";
             this.mnuClientes.Click += new System.EventHandler(this.mnuClientes_Click);
             // 
             // mnuPeriodos
             // 
             this.mnuPeriodos.Name = "mnuPeriodos";
-            this.mnuPeriodos.Size = new System.Drawing.Size(120, 22);
+            this.mnuPeriodos.Size = new System.Drawing.Size(152, 22);
             this.mnuPeriodos.Text = "Periodos";
+            this.mnuPeriodos.Click += new System.EventHandler(this.mnuPeriodos_Click);
             // 
             // mnuDestinos
             // 
             this.mnuDestinos.Name = "mnuDestinos";
-            this.mnuDestinos.Size = new System.Drawing.Size(120, 22);
+            this.mnuDestinos.Size = new System.Drawing.Size(152, 22);
             this.mnuDestinos.Text = "Destinos";
             this.mnuDestinos.Click += new System.EventHandler(this.mnuDestinos_Click);
             // 
             // mnuUsuarios
             // 
             this.mnuUsuarios.Name = "mnuUsuarios";
-            this.mnuUsuarios.Size = new System.Drawing.Size(120, 22);
+            this.mnuUsuarios.Size = new System.Drawing.Size(152, 22);
             this.mnuUsuarios.Text = "Usuarios";
             this.mnuUsuarios.Click += new System.EventHandler(this.mnuUsuarios_Click);
             // 

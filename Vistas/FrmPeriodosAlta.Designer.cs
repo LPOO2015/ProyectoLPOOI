@@ -105,6 +105,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Name = "FrmPeriodosAlta";
             this.Text = "Periodos";
+            this.Load += new System.EventHandler(this.FrmPeriodosAlta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

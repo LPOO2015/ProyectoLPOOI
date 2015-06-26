@@ -132,6 +132,12 @@
     <Compile Include="FrmTablaDestinos.Designer.cs">
       <DependentUpon>FrmTablaDestinos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTablaPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaPeriodos.Designer.cs">
+      <DependentUpon>FrmTablaPeriodos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarioAltaModificacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="FrmTablaDestinos.resx">
       <DependentUpon>FrmTablaDestinos.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaPeriodos.resx">
+      <DependentUpon>FrmTablaPeriodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarioAltaModificacion.resx">
       <DependentUpon>FrmUsuarioAltaModificacion.cs</DependentUpon>
