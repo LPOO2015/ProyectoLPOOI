@@ -88,9 +88,9 @@
             this.lblanulados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblanulados.Location = new System.Drawing.Point(670, 329);
             this.lblanulados.Name = "lblanulados";
-            this.lblanulados.Size = new System.Drawing.Size(28, 13);
+            this.lblanulados.Size = new System.Drawing.Size(14, 13);
             this.lblanulados.TabIndex = 35;
-            this.lblanulados.Text = "123";
+            this.lblanulados.Text = "0";
             // 
             // lblcancelados
             // 
@@ -98,9 +98,9 @@
             this.lblcancelados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcancelados.Location = new System.Drawing.Point(554, 329);
             this.lblcancelados.Name = "lblcancelados";
-            this.lblcancelados.Size = new System.Drawing.Size(28, 13);
+            this.lblcancelados.Size = new System.Drawing.Size(14, 13);
             this.lblcancelados.TabIndex = 34;
-            this.lblcancelados.Text = "123";
+            this.lblcancelados.Text = "0";
             // 
             // lblpendientes
             // 
@@ -108,9 +108,9 @@
             this.lblpendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpendientes.Location = new System.Drawing.Point(420, 329);
             this.lblpendientes.Name = "lblpendientes";
-            this.lblpendientes.Size = new System.Drawing.Size(28, 13);
+            this.lblpendientes.Size = new System.Drawing.Size(14, 13);
             this.lblpendientes.TabIndex = 33;
-            this.lblpendientes.Text = "123";
+            this.lblpendientes.Text = "0";
             // 
             // lblotorgados
             // 
@@ -118,9 +118,9 @@
             this.lblotorgados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblotorgados.Location = new System.Drawing.Point(287, 329);
             this.lblotorgados.Name = "lblotorgados";
-            this.lblotorgados.Size = new System.Drawing.Size(28, 13);
+            this.lblotorgados.Size = new System.Drawing.Size(14, 13);
             this.lblotorgados.TabIndex = 32;
-            this.lblotorgados.Text = "123";
+            this.lblotorgados.Text = "0";
             // 
             // lblPAnulado
             // 

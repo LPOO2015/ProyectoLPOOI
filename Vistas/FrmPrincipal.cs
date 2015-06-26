@@ -81,7 +81,7 @@ namespace Vistas
 
         private void mnuRegistroPago_Click(object sender, EventArgs e)
         {
-            FrmPagos oFrmPagos = new FrmPagos();
+            FrmPagoRealizadosPorCliente oFrmPagos = new FrmPagoRealizadosPorCliente();
             oFrmPagos.Show();
         }
 

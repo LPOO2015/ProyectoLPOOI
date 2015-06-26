@@ -87,5 +87,21 @@ namespace ClasesBase
             cnn.Close();
             return total;
         }
-    }
+
+     public static DataTable TraerPagosRealizados(DateTime fechaInicio, DateTime fechaHasta,string  dni) {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ConsultarPagosFechas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@fechaIni", fechaInicio);
+            cmd.Parameters.AddWithValue("@fechaFin", fechaHasta);
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+}
 }
