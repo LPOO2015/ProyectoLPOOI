@@ -26,6 +26,8 @@ namespace ClasesBase
             return dt;
             
         }
+     
+
         public static void insertarCuota(Cuota oCuota) 
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -105,6 +107,86 @@ namespace ClasesBase
             cnn.Close();
 
             return pagada;
+        }
+
+        public static int cantCuotasPagadas(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand("cuotasPagadas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+            cmd.Parameters.AddWithValue("@estado", "PAGADA");
+
+            SqlParameter param = new SqlParameter("@cant",SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader;
+            cnn.Open();
+            reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            int pagada = Convert.ToInt32(cmd.Parameters["@cant"].Value);
+
+            return pagada;
+        }
+
+        public static int cantCuotasPendientes(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand("cuotasPagadas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+            cmd.Parameters.AddWithValue("@estado", "PENDIENTE");
+
+            SqlParameter param = new SqlParameter("@cant", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader;
+            cnn.Open();
+            reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            int pagada = Convert.ToInt32(cmd.Parameters["@cant"].Value);
+
+            return pagada;
+        }
+
+        public static double sumaCuotasPagadas(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand("sumarCuotas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+            cmd.Parameters.AddWithValue("@estado", "PAGADA");
+
+            SqlParameter param = new SqlParameter("@cant", SqlDbType.Float);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader;
+            cnn.Open();
+            reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            double pagada = Convert.ToDouble(cmd.Parameters["@cant"].Value);
+
+            return pagada;
+        }
+
+        public static double sumaCuotasPendientes(int nroPrestamo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand("sumarCuotas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nro", nroPrestamo);
+            cmd.Parameters.AddWithValue("@estado", "PENDIENTE");
+
+            SqlParameter param = new SqlParameter("@cant", SqlDbType.Float);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader;
+            cnn.Open();
+            reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            double pendiente = Convert.ToDouble(cmd.Parameters["@cant"].Value);
+
+            return pendiente;
         }
     }
 }

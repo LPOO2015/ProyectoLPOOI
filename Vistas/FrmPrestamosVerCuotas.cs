@@ -24,6 +24,16 @@ namespace Vistas
         public void cargarGrilla()
         {
             grdCuotas.DataSource = TrabajarCuotas.TraerCuotas(nroPrestamo);
+            Cliente oCliente = TrabajarClientes.TraerApeNom(nroPrestamo);
+            
+            lblCliente.Text = oCliente.CliApellido+", "+oCliente.CliNombre;
+            lblDNI.Text = oCliente.CliDNI.ToString();
+            lblPrestamo.Text = nroPrestamo.ToString();
+
+            lblCuotasPagadas.Text = TrabajarCuotas.cantCuotasPagadas(nroPrestamo).ToString();
+            lblCuotasPendientes.Text = TrabajarCuotas.cantCuotasPendientes(nroPrestamo).ToString();            
+            lblImportePagado.Text = TrabajarCuotas.sumaCuotasPagadas(nroPrestamo).ToString();
+            lblImportePendiente.Text = TrabajarCuotas.sumaCuotasPendientes(nroPrestamo).ToString();  
         }
                
         

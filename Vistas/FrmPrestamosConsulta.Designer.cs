@@ -100,7 +100,7 @@
             this.btnCuotas.Name = "btnCuotas";
             this.btnCuotas.Size = new System.Drawing.Size(75, 23);
             this.btnCuotas.TabIndex = 6;
-            this.btnCuotas.Text = "Ver Cuotas";
+            this.btnCuotas.Text = "Ver Detalle";
             this.btnCuotas.UseVisualStyleBackColor = true;
             this.btnCuotas.Click += new System.EventHandler(this.btnCuotas_Click);
             // 

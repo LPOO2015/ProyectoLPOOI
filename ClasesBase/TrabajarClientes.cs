@@ -18,7 +18,7 @@ namespace ClasesBase
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
-            
+
 
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -63,7 +63,7 @@ namespace ClasesBase
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "select * from Cliente where CliDni=@dni";
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@dni",dni);
+            cmd.Parameters.AddWithValue("@dni", dni);
             cmd.Connection = cnn;
             cnn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -71,14 +71,14 @@ namespace ClasesBase
             if (reader.Read() == true)
             {
                 oCliente = new Cliente();
-                oCliente.CliDNI=(string)reader["CliDNI"];
-                oCliente.CliNombre=(string)reader["cliNombre"];
-                oCliente.CliApellido=(string)reader["cliApellido"];
-                oCliente.CliSexo=(string)reader["cliSexo"];
-                oCliente.CliFechaNacimiento=(DateTime)reader["cliFechaNacimiento"];
-                oCliente.CliIngresos=(Decimal)reader["cliIngresos"];
-                oCliente.CliDireccion=(string)reader["cliDireccion"];
-                oCliente.CliTelefono=(string)reader["cliTelefono"];
+                oCliente.CliDNI = (string)reader["CliDNI"];
+                oCliente.CliNombre = (string)reader["cliNombre"];
+                oCliente.CliApellido = (string)reader["cliApellido"];
+                oCliente.CliSexo = (string)reader["cliSexo"];
+                oCliente.CliFechaNacimiento = (DateTime)reader["cliFechaNacimiento"];
+                oCliente.CliIngresos = (Decimal)reader["cliIngresos"];
+                oCliente.CliDireccion = (string)reader["cliDireccion"];
+                oCliente.CliTelefono = (string)reader["cliTelefono"];
 
                 return oCliente;
 
@@ -107,17 +107,17 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "insert into Cliente(CliDni,CliNombre,CliApellido,CliSexo,CliFechaNacimiento,CliIngresos,CliDireccion,cliTelefono)"
-            +"values(@dni,@nom,@ape,@sex,@fecnac,@ing,@dir,@tel)";
+            + "values(@dni,@nom,@ape,@sex,@fecnac,@ing,@dir,@tel)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
-            cmd.Parameters.AddWithValue("@dni",oCliente.CliDNI);
-            cmd.Parameters.AddWithValue("@nom",oCliente.CliNombre);
-            cmd.Parameters.AddWithValue("@ape",oCliente.CliApellido);
-            cmd.Parameters.AddWithValue("@sex",oCliente.CliSexo);
-            cmd.Parameters.AddWithValue("@fecnac",oCliente.CliFechaNacimiento);
-            cmd.Parameters.AddWithValue("@ing",oCliente.CliIngresos);
-            cmd.Parameters.AddWithValue("@dir",oCliente.CliDireccion);
-            cmd.Parameters.AddWithValue("@tel",oCliente.CliTelefono);
+            cmd.Parameters.AddWithValue("@dni", oCliente.CliDNI);
+            cmd.Parameters.AddWithValue("@nom", oCliente.CliNombre);
+            cmd.Parameters.AddWithValue("@ape", oCliente.CliApellido);
+            cmd.Parameters.AddWithValue("@sex", oCliente.CliSexo);
+            cmd.Parameters.AddWithValue("@fecnac", oCliente.CliFechaNacimiento);
+            cmd.Parameters.AddWithValue("@ing", oCliente.CliIngresos);
+            cmd.Parameters.AddWithValue("@dir", oCliente.CliDireccion);
+            cmd.Parameters.AddWithValue("@tel", oCliente.CliTelefono);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -149,5 +149,34 @@ namespace ClasesBase
 
         }
 
+        public static Cliente TraerApeNom(int numPrestamo)
+        {
+
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from Cliente where CliDni = (Select CliDni from Prestamo where PreNumero = @numPrestamo)";
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@numPrestamo", numPrestamo);
+            cmd.Connection = cnn;
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Cliente oCliente = null;
+            if (reader.Read() == true)
+            {
+                oCliente = new Cliente();
+                oCliente.CliDNI = (string)reader["CliDNI"];
+                oCliente.CliNombre = (string)reader["cliNombre"];
+                oCliente.CliApellido = (string)reader["cliApellido"];
+                oCliente.CliSexo = (string)reader["cliSexo"];
+                oCliente.CliFechaNacimiento = (DateTime)reader["cliFechaNacimiento"];
+                oCliente.CliIngresos = (Decimal)reader["cliIngresos"];
+                oCliente.CliDireccion = (string)reader["cliDireccion"];
+                oCliente.CliTelefono = (string)reader["cliTelefono"];
+
+                return oCliente;
+            }
+            return oCliente;
+
+        }
     }
 }
