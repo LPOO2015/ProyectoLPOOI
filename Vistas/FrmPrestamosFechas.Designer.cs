@@ -208,7 +208,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.grdPrestamosFechas);
             this.Name = "FrmPrestamosFechas";
-            this.Text = "FrmPrestamosFechas";
+            this.Text = "Prestamos por Fechas";
             ((System.ComponentModel.ISupportInitialize)(this.grdPrestamosFechas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

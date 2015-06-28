@@ -45,6 +45,7 @@ namespace Vistas
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             FrmClientesAlta oFrmClientesAlta = new FrmClientesAlta();
+            oFrmClientesAlta.dni = "";
             oFrmClientesAlta.ShowDialog();
             CargarGrilla();
 
@@ -57,6 +58,19 @@ namespace Vistas
                 FrmClientesAlta oFrmClientesAlta = new FrmClientesAlta();
                 oFrmClientesAlta.dni = grdClientes.CurrentRow.Cells[0].Value.ToString();
                 oFrmClientesAlta.ShowDialog();
+                CargarGrilla();
+            }
+        }        
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (grdClientes.CurrentRow != null)
+            {
+                DialogResult result = MessageBox.Show("Desea eliminar el Cliente?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    TrabajarClientes.deleteCliente(Convert.ToInt32(grdClientes.CurrentRow.Cells["CliDni"].Value));
+                }
                 CargarGrilla();
             }
         }

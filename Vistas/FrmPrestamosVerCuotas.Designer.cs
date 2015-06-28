@@ -52,6 +52,8 @@
             // 
             this.grdCuotas.AllowUserToAddRows = false;
             this.grdCuotas.AllowUserToDeleteRows = false;
+            this.grdCuotas.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdCuotas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdCuotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdCuotas.Location = new System.Drawing.Point(12, 83);
             this.grdCuotas.Name = "grdCuotas";

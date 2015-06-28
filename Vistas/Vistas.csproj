@@ -168,6 +168,10 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagoRealizadosPorCliente.resx">
+      <DependentUpon>FrmPagoRealizadosPorCliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPagosAlta.resx">
       <DependentUpon>FrmPagosAlta.cs</DependentUpon>
       <SubType>Designer</SubType>

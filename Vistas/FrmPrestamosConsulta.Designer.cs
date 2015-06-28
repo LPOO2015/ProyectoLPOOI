@@ -37,7 +37,7 @@
             this.btnCuotas = new System.Windows.Forms.Button();
             this.btnDestinos = new System.Windows.Forms.Button();
             this.btnFechas = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +45,8 @@
             // 
             this.grdPrestamos.AllowUserToAddRows = false;
             this.grdPrestamos.AllowUserToDeleteRows = false;
+            this.grdPrestamos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdPrestamos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPrestamos.Location = new System.Drawing.Point(12, 57);
             this.grdPrestamos.Name = "grdPrestamos";
@@ -124,22 +126,22 @@
             this.btnFechas.UseVisualStyleBackColor = true;
             this.btnFechas.Click += new System.EventHandler(this.btnFechas_Click);
             // 
-            // label3
+            // lblTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Prestamos";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(62, 3);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(170, 37);
+            this.lblTitle.TabIndex = 37;
+            this.lblTitle.Text = "Prestamos";
             // 
             // FrmPrestamosConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 457);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnFechas);
             this.Controls.Add(this.btnDestinos);
             this.Controls.Add(this.btnCuotas);
@@ -169,6 +171,6 @@
         private System.Windows.Forms.Button btnCuotas;
         private System.Windows.Forms.Button btnDestinos;
         private System.Windows.Forms.Button btnFechas;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

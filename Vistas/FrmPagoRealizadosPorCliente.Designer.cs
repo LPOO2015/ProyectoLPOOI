@@ -177,7 +177,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmPagoRealizadosPorCliente";
-            this.Text = "FrmPagoRealizadosPorCliente";
+            this.Text = "Pago Realizados Por Cliente";
             this.Load += new System.EventHandler(this.FrmPagoRealizadosPorCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPagosRealizados)).EndInit();
             this.ResumeLayout(false);

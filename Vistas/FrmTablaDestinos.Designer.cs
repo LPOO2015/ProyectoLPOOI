@@ -98,7 +98,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.grdDestinos);
             this.Name = "FrmTablaDestinos";
-            this.Text = "FrmTablaDestinos";
+            this.Text = "Destinos";
             this.Load += new System.EventHandler(this.FrmTablaDestinos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDestinos)).EndInit();
             this.ResumeLayout(false);

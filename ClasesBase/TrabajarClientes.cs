@@ -178,5 +178,19 @@ namespace ClasesBase
             return oCliente;
 
         }
+
+        public static void deleteCliente(int dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "EliminarCliente";
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }

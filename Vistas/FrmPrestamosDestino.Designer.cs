@@ -31,7 +31,6 @@
             this.grdPrestamosDestino = new System.Windows.Forms.DataGridView();
             this.cmbDestino = new System.Windows.Forms.ComboBox();
             this.lblDestino = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblanulados = new System.Windows.Forms.Label();
             this.lblcancelados = new System.Windows.Forms.Label();
             this.lblpendientes = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.lblPCancelados = new System.Windows.Forms.Label();
             this.lblPPendientes = new System.Windows.Forms.Label();
             this.lblPOtorgados = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdPrestamosDestino)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +47,8 @@
             // 
             this.grdPrestamosDestino.AllowUserToAddRows = false;
             this.grdPrestamosDestino.AllowUserToDeleteRows = false;
+            this.grdPrestamosDestino.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdPrestamosDestino.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdPrestamosDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPrestamosDestino.Location = new System.Drawing.Point(8, 78);
             this.grdPrestamosDestino.Name = "grdPrestamosDestino";
@@ -71,16 +73,6 @@
             this.lblDestino.Size = new System.Drawing.Size(43, 13);
             this.lblDestino.TabIndex = 2;
             this.lblDestino.Text = "Destino";
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(12, 23);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(84, 17);
-            this.lblTitulo.TabIndex = 19;
-            this.lblTitulo.Text = "Prestamos";
             // 
             // lblanulados
             // 
@@ -158,11 +150,22 @@
             this.lblPOtorgados.TabIndex = 28;
             this.lblPOtorgados.Text = "P. Otorgados";
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(157, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(346, 37);
+            this.lblTitle.TabIndex = 36;
+            this.lblTitle.Text = "Prestamos Por Destino";
+            // 
             // FrmPrestamosDestino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 362);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblanulados);
             this.Controls.Add(this.lblcancelados);
             this.Controls.Add(this.lblpendientes);
@@ -171,12 +174,11 @@
             this.Controls.Add(this.lblPCancelados);
             this.Controls.Add(this.lblPPendientes);
             this.Controls.Add(this.lblPOtorgados);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblDestino);
             this.Controls.Add(this.cmbDestino);
             this.Controls.Add(this.grdPrestamosDestino);
             this.Name = "FrmPrestamosDestino";
-            this.Text = "FrmPrestamosDestino";
+            this.Text = "Prestamos Destino";
             this.Load += new System.EventHandler(this.FrmPrestamosDestino_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPrestamosDestino)).EndInit();
             this.ResumeLayout(false);
@@ -189,7 +191,6 @@
         private System.Windows.Forms.DataGridView grdPrestamosDestino;
         private System.Windows.Forms.ComboBox cmbDestino;
         private System.Windows.Forms.Label lblDestino;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblanulados;
         private System.Windows.Forms.Label lblcancelados;
         private System.Windows.Forms.Label lblpendientes;
@@ -198,5 +199,6 @@
         private System.Windows.Forms.Label lblPCancelados;
         private System.Windows.Forms.Label lblPPendientes;
         private System.Windows.Forms.Label lblPOtorgados;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

@@ -27,6 +27,7 @@ namespace Vistas
                 Usuario oUsuario = TrabajarUsuarios.TraerUsuario(username, password);
                 txtUsuario.Text = oUsuario.UserName;
                 txtPasword.Text = oUsuario.Password;
+                txtRePass.Text = oUsuario.Password;
                 txtApellido.Text = oUsuario.Apellido;
                 txtNombre.Text = oUsuario.Nombre;
                 cmbRoles.SelectedValue = oUsuario.RolCodigo;
@@ -48,24 +49,36 @@ namespace Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("valor " + cmbRoles.SelectedValue);
-            Usuario oUsuario = new Usuario();
-            oUsuario.UserName = txtUsuario.Text;
-            oUsuario.Password = txtPasword.Text;
-            oUsuario.Apellido = txtApellido.Text;
-            oUsuario.Nombre = txtNombre.Text;
-            oUsuario.RolCodigo = (int)cmbRoles.SelectedValue;
-            if (username != "")
+            if (txtPasword.Text == txtRePass.Text)
             {
-                TrabajarUsuarios.ActualizarUsuario(oUsuario);
-                this.Dispose();
+                //MessageBox.Show("valor " + cmbRoles.SelectedValue);
+                Usuario oUsuario = new Usuario();
+                oUsuario.UserName = txtUsuario.Text;
+                oUsuario.Password = txtPasword.Text;
+                oUsuario.Apellido = txtApellido.Text;
+                oUsuario.Nombre = txtNombre.Text;
+                oUsuario.RolCodigo = (int)cmbRoles.SelectedValue;
+                if (username != "")
+                {
+                    TrabajarUsuarios.ActualizarUsuario(oUsuario);
+                    this.Dispose();
+                }
+                else
+                {
+                    TrabajarUsuarios.InsertarUsuario(oUsuario);
+                    this.Dispose();
+
+                }
             }
             else
             {
-                TrabajarUsuarios.InsertarUsuario(oUsuario);
-                this.Dispose();
-
+                MessageBox.Show("Las contraseñas no coinciden!");
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
 

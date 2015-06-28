@@ -37,13 +37,13 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.grdClientes = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(392, 49);
+            this.btnBuscar.Location = new System.Drawing.Point(392, 47);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
@@ -54,7 +54,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(12, 54);
+            this.lblApellido.Location = new System.Drawing.Point(12, 52);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(47, 13);
             this.lblApellido.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(215, 54);
+            this.lblNombre.Location = new System.Drawing.Point(215, 52);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(65, 47);
+            this.txtApellido.Location = new System.Drawing.Point(65, 48);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(144, 20);
             this.txtApellido.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(234, 337);
+            this.btnNuevo.Location = new System.Drawing.Point(503, 337);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(315, 337);
+            this.btnEditar.Location = new System.Drawing.Point(584, 337);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 6;
@@ -105,40 +105,43 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(396, 337);
+            this.btnEliminar.Location = new System.Drawing.Point(665, 337);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // grdClientes
             // 
             this.grdClientes.AllowUserToAddRows = false;
             this.grdClientes.AllowUserToDeleteRows = false;
+            this.grdClientes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdClientes.Location = new System.Drawing.Point(12, 89);
             this.grdClientes.Name = "grdClientes";
             this.grdClientes.ReadOnly = true;
-            this.grdClientes.Size = new System.Drawing.Size(459, 242);
+            this.grdClientes.Size = new System.Drawing.Size(844, 242);
             this.grdClientes.TabIndex = 8;
             // 
-            // lblTitulo
+            // lblTitle
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(12, 21);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(66, 17);
-            this.lblTitulo.TabIndex = 18;
-            this.lblTitulo.Text = "Clientes";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(288, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(209, 37);
+            this.lblTitle.TabIndex = 19;
+            this.lblTitle.Text = "ABM Clientes";
             // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 372);
-            this.Controls.Add(this.lblTitulo);
+            this.ClientSize = new System.Drawing.Size(868, 372);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grdClientes);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -168,6 +171,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView grdClientes;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

@@ -98,7 +98,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.grdPeriodos);
             this.Name = "FrmTablaPeriodos";
-            this.Text = "FrmTablaDestinos";
+            this.Text = "Periodos";
             this.Load += new System.EventHandler(this.FrmTablaDestinos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPeriodos)).EndInit();
             this.ResumeLayout(false);

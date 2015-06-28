@@ -50,7 +50,7 @@ namespace Vistas
         {
             if (grdPeriodos.CurrentRow != null)
             {
-                DialogResult result = MessageBox.Show("Desea eliminar el Periodod?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Desea eliminar el Periodos?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     TrabajarPeriodos.deletePeriodo(Convert.ToInt32(grdPeriodos.CurrentRow.Cells["PerCodigo"].Value));

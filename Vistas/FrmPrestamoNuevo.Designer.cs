@@ -77,7 +77,7 @@
             // cmbClientes
             // 
             this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(119, 57);
+            this.cmbClientes.Location = new System.Drawing.Point(127, 57);
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(121, 21);
             this.cmbClientes.TabIndex = 0;
@@ -85,28 +85,28 @@
             // cmbPeriodos
             // 
             this.cmbPeriodos.FormattingEnabled = true;
-            this.cmbPeriodos.Location = new System.Drawing.Point(119, 132);
+            this.cmbPeriodos.Location = new System.Drawing.Point(127, 132);
             this.cmbPeriodos.Name = "cmbPeriodos";
             this.cmbPeriodos.Size = new System.Drawing.Size(121, 21);
             this.cmbPeriodos.TabIndex = 2;
             // 
             // txtImporte
             // 
-            this.txtImporte.Location = new System.Drawing.Point(119, 198);
+            this.txtImporte.Location = new System.Drawing.Point(127, 198);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(100, 20);
             this.txtImporte.TabIndex = 4;
             // 
             // txtCantidadCuotas
             // 
-            this.txtCantidadCuotas.Location = new System.Drawing.Point(119, 224);
+            this.txtCantidadCuotas.Location = new System.Drawing.Point(127, 224);
             this.txtCantidadCuotas.Name = "txtCantidadCuotas";
             this.txtCantidadCuotas.Size = new System.Drawing.Size(100, 20);
             this.txtCantidadCuotas.TabIndex = 5;
             // 
             // txtTasaInteres
             // 
-            this.txtTasaInteres.Location = new System.Drawing.Point(119, 250);
+            this.txtTasaInteres.Location = new System.Drawing.Point(127, 250);
             this.txtTasaInteres.Name = "txtTasaInteres";
             this.txtTasaInteres.Size = new System.Drawing.Size(100, 20);
             this.txtTasaInteres.TabIndex = 6;
@@ -150,7 +150,7 @@
             // dtpfecha
             // 
             this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfecha.Location = new System.Drawing.Point(119, 165);
+            this.dtpfecha.Location = new System.Drawing.Point(127, 165);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(118, 20);
             this.dtpfecha.TabIndex = 3;
@@ -188,12 +188,12 @@
             // cmbDestinos
             // 
             this.cmbDestinos.FormattingEnabled = true;
-            this.cmbDestinos.Location = new System.Drawing.Point(119, 95);
+            this.cmbDestinos.Location = new System.Drawing.Point(127, 95);
             this.cmbDestinos.Name = "cmbDestinos";
             this.cmbDestinos.Size = new System.Drawing.Size(121, 21);
             this.cmbDestinos.TabIndex = 1;
             // 
-            // FrmPrestamos
+            // FrmPrestamoNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,8 +215,8 @@
             this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.lblDestino);
             this.Controls.Add(this.lblCliente);
-            this.Name = "FrmPrestamos";
-            this.Text = "FrmPrestamos";
+            this.Name = "FrmPrestamoNuevo";
+            this.Text = "Registrar Prestamo";
             this.Load += new System.EventHandler(this.FrmPrestamos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

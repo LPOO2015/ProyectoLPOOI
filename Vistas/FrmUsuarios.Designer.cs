@@ -37,9 +37,9 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.rdbAscendente = new System.Windows.Forms.RadioButton();
             this.rdbDescendente = new System.Windows.Forms.RadioButton();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +47,8 @@
             // 
             this.grdUsuarios.AllowUserToAddRows = false;
             this.grdUsuarios.AllowUserToDeleteRows = false;
+            this.grdUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdUsuarios.Location = new System.Drawing.Point(12, 94);
             this.grdUsuarios.Name = "grdUsuarios";
@@ -126,16 +128,6 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(12, 19);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(72, 17);
-            this.lblTitulo.TabIndex = 17;
-            this.lblTitulo.Text = "Usuarios";
-            // 
             // rdbAscendente
             // 
             this.rdbAscendente.AutoSize = true;
@@ -158,14 +150,24 @@
             this.rdbDescendente.Text = "Descendente";
             this.rdbDescendente.UseVisualStyleBackColor = true;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(228, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(144, 37);
+            this.lblTitle.TabIndex = 37;
+            this.lblTitle.Text = "Usuarios";
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 372);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.rdbDescendente);
             this.Controls.Add(this.rdbAscendente);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -195,8 +197,8 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.RadioButton rdbAscendente;
         private System.Windows.Forms.RadioButton rdbDescendente;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

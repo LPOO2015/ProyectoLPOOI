@@ -32,9 +32,9 @@
             this.cmbPrestamos = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblPrestamos = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.grdCuotas = new System.Windows.Forms.DataGridView();
             this.btnPagar = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdCuotas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,20 +74,12 @@
             this.lblPrestamos.TabIndex = 3;
             this.lblPrestamos.Text = "Prestamos:";
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(21, 21);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(45, 17);
-            this.lblTitulo.TabIndex = 17;
-            this.lblTitulo.Text = "Pago";
-            // 
             // grdCuotas
             // 
             this.grdCuotas.AllowUserToAddRows = false;
             this.grdCuotas.AllowUserToDeleteRows = false;
+            this.grdCuotas.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdCuotas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdCuotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdCuotas.Location = new System.Drawing.Point(24, 113);
             this.grdCuotas.Name = "grdCuotas";
@@ -108,14 +100,24 @@
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(201, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(108, 37);
+            this.lblTitle.TabIndex = 37;
+            this.lblTitle.Text = "Pagos";
+            // 
             // FrmPagosAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 352);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.grdCuotas);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblPrestamos);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cmbPrestamos);
@@ -135,8 +137,8 @@
         private System.Windows.Forms.ComboBox cmbPrestamos;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblPrestamos;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView grdCuotas;
         private System.Windows.Forms.Button btnPagar;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

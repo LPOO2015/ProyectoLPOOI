@@ -46,7 +46,7 @@ namespace Vistas
             {
                 FrmPrestamosVerCuotas oFrmPrestamosVerCuotas = new FrmPrestamosVerCuotas();
                 oFrmPrestamosVerCuotas.nroPrestamo = (int)grdPrestamos.CurrentRow.Cells[0].Value;
-                if (grdPrestamos.CurrentRow.Cells[8].Value.ToString() == "ANULADO")
+                if (grdPrestamos.CurrentRow.Cells[8].Value.ToString() == "ANULADO" || grdPrestamos.CurrentRow.Cells[8].Value.ToString() == "CANCELADO")
                 {
                     oFrmPrestamosVerCuotas.anulado = false;
                 }
