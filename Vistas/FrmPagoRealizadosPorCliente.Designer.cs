@@ -138,8 +138,9 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Location = new System.Drawing.Point(231, 297);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(0, 13);
+            this.lblCantidad.Size = new System.Drawing.Size(10, 13);
             this.lblCantidad.TabIndex = 11;
+            this.lblCantidad.Text = "-";
             // 
             // label6
             // 
@@ -155,8 +156,9 @@
             this.lblTotalPagado.AutoSize = true;
             this.lblTotalPagado.Location = new System.Drawing.Point(478, 297);
             this.lblTotalPagado.Name = "lblTotalPagado";
-            this.lblTotalPagado.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalPagado.Size = new System.Drawing.Size(10, 13);
             this.lblTotalPagado.TabIndex = 13;
+            this.lblTotalPagado.Text = "-";
             // 
             // FrmPagoRealizadosPorCliente
             // 
@@ -178,7 +180,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmPagoRealizadosPorCliente";
             this.Text = "Pago Realizados Por Cliente";
-            this.Load += new System.EventHandler(this.FrmPagoRealizadosPorCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPagosRealizados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

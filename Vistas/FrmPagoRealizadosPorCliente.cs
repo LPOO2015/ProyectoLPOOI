@@ -43,13 +43,9 @@ namespace Vistas
         {
             grdPagosRealizados.DataSource = TrabajarPagos.TraerPagosRealizados(fInicio, fHasta,dni);
             lblCantidad.Text= Convert.ToString(grdPagosRealizados.RowCount);
+            lblTotalPagado.Text = TrabajarPagos.SumarPagosRealizados(fInicio, fHasta, dni);
 
 
-
-        }
-
-        private void FrmPagoRealizadosPorCliente_Load(object sender, EventArgs e)
-        {
 
         }
 

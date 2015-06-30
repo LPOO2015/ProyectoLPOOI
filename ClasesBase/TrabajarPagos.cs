@@ -103,5 +103,30 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+
+     public static String SumarPagosRealizados(DateTime fechaInicio, DateTime fechaHasta, string dni)
+     {
+         SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+         SqlCommand cmd = new SqlCommand();
+         cmd.CommandText = "SumarPagosFechas";
+         cmd.CommandType = CommandType.StoredProcedure;
+         cmd.Connection = cnn;
+         cmd.Parameters.AddWithValue("@fechaIni", fechaInicio);
+         cmd.Parameters.AddWithValue("@fechaFin", fechaHasta);
+         cmd.Parameters.AddWithValue("@dni", dni);
+
+         SqlParameter param;
+         param = new SqlParameter("@cant", SqlDbType.VarChar);
+         param.Value = "-";
+         param.Direction = ParameterDirection.Output;
+         cmd.Parameters.Add(param);
+
+         SqlDataReader reader;
+         cnn.Open();
+         reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+         String pagada = Convert.ToString(cmd.Parameters["@cant"].Value).Trim();
+
+         return pagada;
+     }
 }
 }
