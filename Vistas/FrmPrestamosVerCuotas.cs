@@ -32,8 +32,8 @@ namespace Vistas
 
             lblCuotasPagadas.Text = TrabajarCuotas.cantCuotasPagadas(nroPrestamo).ToString();
             lblCuotasPendientes.Text = TrabajarCuotas.cantCuotasPendientes(nroPrestamo).ToString();            
-            lblImportePagado.Text = TrabajarCuotas.sumaCuotasPagadas(nroPrestamo).ToString();
-            lblImportePendiente.Text = TrabajarCuotas.sumaCuotasPendientes(nroPrestamo).ToString();  
+            lblImportePagado.Text = TrabajarCuotas.sumaCuotasPagadas(nroPrestamo);
+            lblImportePendiente.Text = TrabajarCuotas.sumaCuotasPendientes(nroPrestamo);  
         }
                
         

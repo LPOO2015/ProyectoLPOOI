@@ -149,7 +149,7 @@ namespace ClasesBase
             return pagada;
         }
 
-        public static double sumaCuotasPagadas(int nroPrestamo)
+        public static String sumaCuotasPagadas(int nroPrestamo)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand("sumarCuotas", cnn);
@@ -157,19 +157,21 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@nro", nroPrestamo);
             cmd.Parameters.AddWithValue("@estado", "PAGADA");
 
-            SqlParameter param = new SqlParameter("@cant", SqlDbType.Float);
+            SqlParameter param;
+            param = new SqlParameter("@cant", SqlDbType.VarChar);
+            param.Value = "-";
             param.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(param);
 
             SqlDataReader reader;
             cnn.Open();
             reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-            double pagada = Convert.ToDouble(cmd.Parameters["@cant"].Value);
+            String pagada = Convert.ToString(cmd.Parameters["@cant"].Value).Trim();
 
             return pagada;
         }
 
-        public static double sumaCuotasPendientes(int nroPrestamo)
+        public static String sumaCuotasPendientes(int nroPrestamo)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand("sumarCuotas", cnn);
@@ -177,14 +179,15 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@nro", nroPrestamo);
             cmd.Parameters.AddWithValue("@estado", "PENDIENTE");
 
-            SqlParameter param = new SqlParameter("@cant", SqlDbType.Float);
+            SqlParameter param = new SqlParameter("@cant", SqlDbType.VarChar);
+            param.Value = "-";
             param.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(param);
 
             SqlDataReader reader;
             cnn.Open();
             reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-            double pendiente = Convert.ToDouble(cmd.Parameters["@cant"].Value);
+            String pendiente = Convert.ToString(cmd.Parameters["@cant"].Value).Trim();
 
             return pendiente;
         }
