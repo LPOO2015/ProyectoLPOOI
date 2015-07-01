@@ -192,5 +192,25 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+        public static Boolean verificarClientePrestamo(string cliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select CliDni from Prestamo WHERE CliDni = @CliDni";
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@CliDni", cliente);
+            cmd.Connection = cnn;
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read() == true)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+            
+
+        }
     }
 }

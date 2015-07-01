@@ -69,7 +69,17 @@ namespace Vistas
                 DialogResult result = MessageBox.Show("Desea eliminar el Cliente?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    TrabajarClientes.deleteCliente(Convert.ToInt32(grdClientes.CurrentRow.Cells["CliDni"].Value));
+                    //TrabajarClientes.deleteCliente(Convert.ToInt32(grdClientes.CurrentRow.Cells["CliDni"].Value));
+                    Boolean cli;
+                    cli = TrabajarClientes.verificarClientePrestamo(Convert.ToString(grdClientes.CurrentRow.Cells["CliDni"].Value));
+                    if (cli == true)
+                    {
+                        MessageBox.Show("tiene prestamos");
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO tiene prestamos");
+                    }
                 }
                 CargarGrilla();
             }

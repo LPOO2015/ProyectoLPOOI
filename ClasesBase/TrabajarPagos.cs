@@ -116,7 +116,7 @@ namespace ClasesBase
          cmd.Parameters.AddWithValue("@dni", dni);
 
          SqlParameter param;
-         param = new SqlParameter("@cant", SqlDbType.VarChar);
+         param = new SqlParameter("@cant", SqlDbType.Decimal);
          param.Value = "-";
          param.Direction = ParameterDirection.Output;
          cmd.Parameters.Add(param);
@@ -124,7 +124,7 @@ namespace ClasesBase
          SqlDataReader reader;
          cnn.Open();
          reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-         String pagada = Convert.ToString(cmd.Parameters["@cant"].Value).Trim();
+         String pagada = Convert.ToString(cmd.Parameters["@cant"].Value);
 
          return pagada;
      }
